@@ -83,7 +83,7 @@ module PosPant(h_sinc,v_sinc,h1,h0,m1,m0,s1,s0,Rout,Gout,Bout,clk);
                 colorOut = 0;
             end
             if(posX==1 || posX == 2 || posX==3) begin
-                if(disp7[7] == 1) begin
+                if(disp7[6] == 1) begin
                     colorOut = 1;
                 end
                 else begin
@@ -105,7 +105,7 @@ module PosPant(h_sinc,v_sinc,h1,h0,m1,m0,s1,s0,Rout,Gout,Bout,clk);
                 end
             end
             if(posX == 4) begin
-                if(disp7[6] == 1) begin
+                if(disp7[5] == 1) begin
                     colorOut = 1;
                 end
                 else begin
@@ -133,7 +133,7 @@ module PosPant(h_sinc,v_sinc,h1,h0,m1,m0,s1,s0,Rout,Gout,Bout,clk);
                 colorOut == 0;
             end
             if(posX == 0) begin 
-                if(disp7[3] == 1) begin
+                if(disp7[2] == 1) begin
                     colorOut = 1;
                 end
                 else begin
@@ -141,7 +141,7 @@ module PosPant(h_sinc,v_sinc,h1,h0,m1,m0,s1,s0,Rout,Gout,Bout,clk);
                 end
             end
             if(posX == 4)begin
-                if(disp7[5]==1)begin
+                if(disp7[4]==1)begin
                     colorOut = 1;
                 end
                 else begin
@@ -155,7 +155,7 @@ module PosPant(h_sinc,v_sinc,h1,h0,m1,m0,s1,s0,Rout,Gout,Bout,clk);
                 colorOut = 0;
             end
             if(posX == 1 || posX ==2 || posX == 3)begin
-                if(disp7[4] == 1) begin
+                if(disp7[3] == 1) begin
                     colorOut = 1;
                 end
                 else begin
