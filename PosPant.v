@@ -1,4 +1,4 @@
-module PosPant(h_sinc,v_sinc,h1,h0,m1,m0,s1,s0,colorOut,clk);
+module PosPant(h_sinc,v_sinc,h1,h0,m1,m0,s1,s0,Rout,Gout,Bout,clk);
     input h_sinc,v_sinc,clk;
     input [3:0] h1;
     input [3:0] h0;
@@ -6,7 +6,8 @@ module PosPant(h_sinc,v_sinc,h1,h0,m1,m0,s1,s0,colorOut,clk);
     input [3:0] m0;
     input [3:0] s1;
     input [3:0] s0;
-    output colorOut;
+    output Rout,Gout,Bout;
+    reg colorOut;
     reg inside, posX, posY;
     reg despl;
     reg[3:0] num;
@@ -46,31 +47,31 @@ module PosPant(h_sinc,v_sinc,h1,h0,m1,m0,s1,s0,colorOut,clk);
             inside = OFF;
         end
 
-        posX = countH - HOR_min;
-        posY = countV - VER_min;
+        posX = countH;
+        posY = countV;
 
         if(inside == ON) begin
             if(posX>=DH1m && posX <=DH1M) begin
                 num = h1;
                 despl = DH1m;
             end
-            if(posX>=DH2m && posX>=DH2M) begin
+            if(posX>=DH2m && posX<=DH2M) begin
                 num = h0;
                 despl = DH2m;
             end
-            if(posX>=DH3m && posX>=DH3M) begin
+            if(posX>=DH3m && posX<=DH3M) begin
                 num = m1;
                 despl = DH3m;
             end
-            if(posX>=DH4m && posX>=DH4M) begin
+            if(posX>=DH4m && posX<=DH4M) begin
                 num = m0;
                 despl = DH4m;
             end
-            if(posX>=DH5m && posX>=DH5M) begin
+            if(posX>=DH5m && posX<=DH5M) begin
                 num = s1;
                 despl = DH5m;
             end
-            if(posX>=DH6m && posX>=DH6M) begin
+            if(posX>=DH6m && posX<=DH6M) begin
                 num = s0;
                 despl = DH6m;
             end
@@ -162,6 +163,10 @@ module PosPant(h_sinc,v_sinc,h1,h0,m1,m0,s1,s0,colorOut,clk);
                 end
             end
         end
+
+        Rout = colorOut;
+        Gout = colorOut;
+        Bout = colorOUt;
     end
 
 
