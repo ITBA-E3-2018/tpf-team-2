@@ -1,4 +1,4 @@
-`timescale 100us / 10us
+`timescale 1ms / 100us
 module clock_gen(clk);
 
 parameter PERIOD = 2;

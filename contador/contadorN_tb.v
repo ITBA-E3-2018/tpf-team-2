@@ -1,6 +1,6 @@
 `include "./contadorN.v"
 `include "clock.v"
-`timescale 100us / 10us
+`timescale 1ms / 100us
 
 module count_tb();
 

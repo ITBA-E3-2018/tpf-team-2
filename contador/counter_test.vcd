@@ -1,11 +1,11 @@
 $date
-	Mon Nov 19 14:47:54 2018
+	Mon Nov 19 15:08:15 2018
 $end
 $version
 	Icarus Verilog
 $end
 $timescale
-	10us
+	100us
 $end
 $scope module count_tb $end
 $var wire 8 ! count [7:0] $end
