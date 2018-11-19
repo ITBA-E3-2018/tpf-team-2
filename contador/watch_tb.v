@@ -1,5 +1,3 @@
-`include "./contadorN.v"
-`include "clock.v"
 `include "count2watch.v"
 
 `timescale 100us / 100us
@@ -8,21 +6,26 @@ module count_tb();
 
 parameter size = 26;
 
-wire clk;
-clock_gen #(.PERIOD(10)) clk_gen(clk);
+
+// Testable Variables
 reg nr = 0;
 reg enable = 0;
-wire [size-1:0] count;
+reg [size-1:0] count;
+
+
+// Test Outputs
 wire [10:0] ms;
 wire [6:0] s;
 wire [6:0] min;
 wire [3:0] hr;
 
-contadorN #(.BITS(size)) counter (
-    .NEclk(clk),
-    .Nreset(nr),
-    .Enable(enable),
-    .count(count)
+count2watch #(.BITS(size)) watch_data (
+    .count(count),
+    .nreset(nr),
+    .ms(ms),
+    .s(s),
+    .min(min),
+    .hr(hr)
 );
 
 initial begin
@@ -35,6 +38,12 @@ initial begin
 end
 
 initial begin
+    #10 count = 1100;       // 1s 100ms
+    #10 count = 7200000;    // 2h 0m 0s 0ms
+    #10 count = 123548;     // 0h 2m 3s 548ms
+end
+
+initial begin
     #100000 $finish;
 end
 
@@ -44,8 +53,8 @@ initial begin
 end
 
 initial begin
-    $display("\t\tTime\tcount");
-    $monitor("%d\t%d",$time,count);
+    $display("\t\tTime\tcount\t\tOutput");
+    $monitor("%d\t%d\t%d:%d:%d:(%d)",$time,count,hr,min,s,ms);
 end
 
 endmodule

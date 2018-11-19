@@ -3,7 +3,7 @@
 3. Milisegundos: 000-999 (módulo 1000?)
 4. Segundos: 00-59 (ms/1000 rem 60?)
 5. Minutos: 00-59 (ms/1000/60 rem 60?)
-6. Horas: 0-9 (ms/1000/60/60 rem 100)
+6. Horas: 0-9 (ms/1000/60/60 rem 10)
 7. Cuento máximo 360 e6 s
 
 Modelo: EP4CE22F17C6
