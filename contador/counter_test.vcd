@@ -1,0 +1,90 @@
+$date
+	Mon Nov 19 14:47:54 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	10us
+$end
+$scope module count_tb $end
+$var wire 8 ! count [7:0] $end
+$var wire 1 " clk $end
+$var reg 1 # enable $end
+$var reg 1 $ nr $end
+$scope module clk_gen $end
+$var reg 1 " clk $end
+$scope begin CLOCK_DRIVER $end
+$upscope $end
+$upscope $end
+$scope module counter $end
+$var wire 1 # Enable $end
+$var wire 1 " NEclk $end
+$var wire 1 $ Nreset $end
+$var reg 8 % count [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 %
+0$
+0#
+0"
+b0 !
+$end
+#10
+1$
+#20
+1#
+#30
+1"
+#60
+0"
+#70
+b1 !
+b1 %
+#90
+1"
+#100
+b0 !
+b0 %
+0$
+#120
+0"
+#140
+1$
+#150
+1"
+b1 !
+b1 %
+#160
+0#
+#180
+0"
+#200
+1#
+#210
+1"
+#240
+0"
+#250
+b10 !
+b10 %
+#270
+1"
+#300
+0"
+#310
+b11 !
+b11 %
+#330
+1"
+#360
+0"
+#370
+b100 !
+b100 %
+#390
+1"
+#400
