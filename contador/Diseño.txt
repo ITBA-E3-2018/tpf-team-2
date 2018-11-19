@@ -7,3 +7,4 @@
 7. Cuento máximo 360 e6 s
 
 Modelo: EP4CE22F17C6
+Reference Clock: 50-156.25MHz

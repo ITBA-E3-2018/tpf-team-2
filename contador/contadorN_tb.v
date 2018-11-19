@@ -1,22 +1,33 @@
 `include "./contadorN.v"
 `include "clock.v"
+`include "count2ms.v"
+
 `timescale 1ms / 100us
 
 module count_tb();
 
-parameter size = 8;
+parameter size = 10;
 
 wire clk;
-clock_gen #(.PERIOD(6)) clk_gen(clk);
+clock_gen #(.PERIOD(2)) clk_gen(clk);
 reg nr = 0;
 reg enable = 0;
+reg latch = 0;
 wire [size-1:0] count;
+wire [10:0] ms;
 
 contadorN #(.BITS(size)) counter (
     .NEclk(clk),
     .Nreset(nr),
     .Enable(enable),
     .count(count)
+);
+
+count2ms #(.BITS(size)) millis (
+    .count(count),
+    .nreset(nr),
+    .ms(ms),
+    .latch(latch)
 );
 
 initial begin
@@ -29,7 +40,7 @@ initial begin
 end
 
 initial begin
-    #40 $finish;
+    #2200 $finish;
 end
 
 initial begin
@@ -38,8 +49,8 @@ initial begin
 end
 
 initial begin
-    $display("\t\tTime\tClk\tNreset\tenable\tcount");
-    $monitor("%d\t%b\t%b\t%b\t%d",$time,clk,nr,enable,count);
+    $display("\t\tTime\tNreset\tenable\tcount\tms");
+    $monitor("%d\t%b\t%b\t%d\t%d",$time,nr,enable,count,ms);
 end
 
 endmodule
