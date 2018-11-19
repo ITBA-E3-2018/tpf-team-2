@@ -13,9 +13,9 @@ clock_gen #(.PERIOD(10)) clk_gen(clk);
 reg nr = 0;
 reg enable = 0;
 wire [size-1:0] count;
-wire [10:0] ms;
-wire [6:0] s;
-wire [6:0] min;
+wire [9:0] ms;
+wire [5:0] s;
+wire [5:0] min;
 wire [3:0] hr;
 
 contadorN #(.BITS(size)) counter (

@@ -13,18 +13,18 @@ parameter BITS = 4;
 input [BITS-1 : 0] count;
 input latch, nreset;
 
-output [10:0] ms;
-output [6:0] s;
-output [6:0] min;
+output [9:0] ms;
+output [5:0] s;
+output [5:0] min;
 output [3:0] hr;
 
 // Defining Data Types
 wire [BITS-1 : 0] count;
 wire latch, nreset;
 
-reg [10:0] ms;
-reg [6:0] s;
-reg [6:0] min;
+reg [9:0] ms;
+reg [5:0] s;
+reg [5:0] min;
 reg [3:0] hr;
 
 // Code

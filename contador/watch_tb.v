@@ -2,7 +2,7 @@
 
 `timescale 100us / 100us
 
-module count_tb();
+module watch_tb();
 
 parameter size = 26;
 
@@ -14,9 +14,9 @@ reg [size-1:0] count;
 
 
 // Test Outputs
-wire [10:0] ms;
-wire [6:0] s;
-wire [6:0] min;
+wire [9:0] ms;
+wire [5:0] s;
+wire [5:0] min;
 wire [3:0] hr;
 
 count2watch #(.BITS(size)) watch_data (
@@ -48,7 +48,7 @@ initial begin
 end
 
 initial begin
-    $dumpfile("counter_test.vcd");
+    $dumpfile("watch_test.vcd");
     $dumpvars;
 end
 
