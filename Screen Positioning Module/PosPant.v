@@ -18,11 +18,11 @@ module PosPant(h_sinc,v_sinc,h1,h0,m1,m0,s1,s0,Rout,Gout,Bout,clk);//, countH,co
     wire[6:0] disp7;
     reg [10:0] countV;
     reg [10:0] countH;
-    parameter RETARDO = 48;
-    parameter HOR_min=295, HOR_max=345, VER_min=235, VER_max=244;
-    parameter DH1m=(295+RETARDO),DH1M=(300+RETARDO), DH2m=(303+RETARDO), DH2M=(308+RETARDO),+
-        DH3m=(313+RETARDO), DH3M=(318+RETARDO), DH4m=(321+RETARDO), DH4M=(326+RETARDO), DH5m=(331+RETARDO),
-        DH5M=(336+RETARDO), DH6m=(339+RETARDO), DH6M = (344+RETARDO);
+    parameter RETARDO_H = 48, RETARDO_V=33;
+    parameter HOR_min=295, HOR_max=345, VER_min=(235+RETARDO_V), VER_max=(244+RETARDO_V);
+    parameter DH1m=(295+RETARDO_H),DH1M=(300+RETARDO_H), DH2m=(303+RETARDO_H), DH2M=(308+RETARDO_H),+
+        DH3m=(313+RETARDO_H), DH3M=(318+RETARDO_H), DH4m=(321+RETARDO_H), DH4M=(326+RETARDO_H), DH5m=(331+RETARDO_H),
+        DH5M=(336+RETARDO_H), DH6m=(339+RETARDO_H), DH6M = (344+RETARDO_H);
 
 
     NumTo7Seg Disp(num,disp7);
