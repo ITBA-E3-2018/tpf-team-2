@@ -19,15 +19,50 @@ parameter H_SYNCPULSE=96, H_BPORCH=48, H_DISPLAY=640, H_FPORCH=16, H_SYNC=800;
 always @(posedge(clk)) begin
 //Determination of vsync signal
     if(i<((V_SYNC * H_SYNC)-1)) begin
-        if(i< (V_SYNCPULSE * H_SYNC))begin
+        if(i<(V_SYNCPULSE * H_SYNC))begin
             vsync=1; //ver si mandar asi o si mandar 1'b1;
             r=0;
             g=0;
             v=0;
-            //ver hsync
+            //Determination of hsync signal
+            if(j<(H_SYNC - 1)) begin
+                if(j<H_SYNCPULSE)begin
+                    hsync=1;
+                end
+                else begin
+                    hsync=0;
+                end
+                j=j+1;
+            end
+            else if (j==(H_SYNC - 1)) begin
+                hsync=0;
+                j=0;
+            end
+            ///////////////////////////////
         end
         else begin
             vsync=0;
+            //Determination of hsync signal
+            if(j<(H_SYNC - 1)) begin
+                if(j<H_SYNCPULSE)begin
+                    hsync=1;
+                end
+                else begin
+                    hsync=0;
+                end
+                j=j+1;
+            end
+            else if (j==(H_SYNC - 1)) begin
+                hsync=0;
+                j=0;
+            end
+            ///////////////////////////////
+            //Determination of r,g and b signals
+            if((vsync==0)&&(hsync==0))begin
+            r=rIn;
+            g=gIn;
+            b=bIn;
+            end
         end
         i=i+1;
     end
@@ -35,6 +70,15 @@ always @(posedge(clk)) begin
         vsync=0;
         i=0;
     end
+
+
+
+
+
+
+
+
+
 //Determination of hsync signal
     if(j<(H_SYNC - 1)) begin
         if(j<H_SYNCPULSE)begin
@@ -49,6 +93,7 @@ always @(posedge(clk)) begin
         hsync=0;
         j=0;
     end
+
 
 end
 
