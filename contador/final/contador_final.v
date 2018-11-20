@@ -1,6 +1,6 @@
 `include "./contadorN.v"
-`include "count2watch.v"
-`include "bin2bcd.v"
+`include "./count2watch.v"
+`include "./bin2bcd.v"
 
 module contador_final (
     NEclk,                              // Negative-edge clock
@@ -42,9 +42,9 @@ wire [3:0] hr;                          // Binary Data to BCD Data
 // Code
 
 contadorN #(.BITS(size)) counter (
-    .NEclk(clk),
-    .Nreset(nr),
-    .Enable(enable),
+    .NEclk(NEclk),
+    .Nreset(Nreset),
+    .Enable(Enable),
     .count(count)
 );
 

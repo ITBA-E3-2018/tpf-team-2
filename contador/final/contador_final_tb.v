@@ -43,7 +43,7 @@ initial begin
 end
 
 initial begin
-    #72000100 $finish;                  // Si lo corrés vas a estar un buen rato
+    #7200 $finish;                  // Si lo corrés vas a estar un buen rato
 end
 
 initial begin
@@ -52,7 +52,7 @@ initial begin
 end
 
 initial begin
-    $display("\t\tTime\t\t BCD_Out");
+    $display("\t\tTime\t BCD_Out");
     $monitor("%d\t%d:%d%d:%d%d(%d%d%d)",$time,bcd_h, bcd_min_1, bcd_min_0, bcd_s_1, bcd_s_0, bcd_ms_2, bcd_ms_1, bcd_ms_0);
 end
 
