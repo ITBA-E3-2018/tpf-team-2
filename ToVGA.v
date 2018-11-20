@@ -39,7 +39,9 @@ always @(posedge(clk)) begin
 
             end
             else if(i<(V_SYNCPULSE + V_BPORCH + V_DISPLAY + V_FPORCH))begin
-
+            r=0;
+            g=0;
+            v=0; 
             end
             else begin
             r=0;
