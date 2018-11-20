@@ -43,7 +43,7 @@ initial begin
 end
 
 initial begin
-    #7200 $finish;                  // Si lo corrés vas a estar un buen rato
+    #7200000 $finish;                  // Si lo corrés vas a estar un buen rato
 end
 
 initial begin
