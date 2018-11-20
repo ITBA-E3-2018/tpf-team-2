@@ -37,7 +37,7 @@ module PosPant(h_sinc,v_sinc,h1,h0,m1,m0,s1,s0,Rout,Gout,Bout,clk);//, countH,co
     end
 
     always @ (negedge h_sinc) begin
-        countH = 0;
+        countH <= 0;
         countV = countV+1;
     end
     
