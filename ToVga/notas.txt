@@ -1,0 +1,16 @@
+aprox ... ns por pixel
+
+clk 54 MHz??
+
+addressstall signal
+
+clk: 50Mhz, T=20ns
+
+refresh 60Hz, T=(1/60)s
+
+
+Para 640x480 aprox 20ns por pixel
+12800ns por linea 
+6144000ns por pantalla
+
+vertical sync dura mas que la hsync

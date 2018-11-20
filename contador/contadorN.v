@@ -1,4 +1,4 @@
-`timescale 1ms / 100us
+`timescale 100us / 100us
 
 module contadorN(
     NEclk,      // Negative-edge clock

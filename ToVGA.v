@@ -1,14 +1,15 @@
 
-module ToVGA (clk,hsync,vsync,r,g,b);
-input wire clk;
-output wire hsync,vsync,r,g,b;
-reg pantalla[0:479] x [0:639];
+module ToVGA (clk, rIn, gIn, bIn, hsync, vsync, r, g, b);
+input wire clk,rIn, gIn, bIn;
+output reg hsync,vsync;
+output wire r,g,b;
+//reg pantalla[0:479] x [0:639];
 integer i,j;
 initial i=0,j=0;
 
 //El periodo de V_SYNC es "525 pixels" y el de H_SYNC es "800 pixels"
-parameter V_DISPLAY=480, V_FPORCH=10, V_BPORCH=33, V_SYNCPULSE=2, V_SYNC=525;
-parameter H_DISPLAY=640, H_FPORCH=16, H_BPORCH=48, H_SYNCPULSE=96, H_SYNC=800;
+parameter V_SYNCPULSE=2, V_BPORCH=33, V_DISPLAY=480, V_FPORCH=10, V_SYNC=525;
+parameter H_SYNCPULSE=96, H_BPORCH=48, H_DISPLAY=640, H_FPORCH=16, H_SYNC=800;
 
 //V_SYNC abarca todo lo siguiente en el siguiente orden:
 //V_SYNCPULSE:  black - vsync 0
@@ -17,29 +18,116 @@ parameter H_DISPLAY=640, H_FPORCH=16, H_BPORCH=48, H_SYNCPULSE=96, H_SYNC=800;
 //V_FPORCH:     black - vsync 1
 
 always @(posedge(clk)) begin
-    if(i<V_SYNC) begin
-        if(i<V_SYNCPULSE)begin
-            vsync=0; //ver si mandar asi o si mandar 1'b0;
+//Determination of vsync signal
+    if(i<((V_SYNC * H_SYNC)-1)) begin
+        if(i<(V_SYNCPULSE * H_SYNC))begin
+            vsync=1; //ver si mandar asi o si mandar 1'b1;
             r=0;
             g=0;
             v=0;
-            //ver hsync
+            //Determination of hsync signal
+            if(j<(H_SYNC - 1)) begin
+                if(j<H_SYNCPULSE)begin
+                    hsync=1;
+                end
+                else begin
+                    hsync=0;
+                end
+                j=j+1;
+            end
+            else if (j==(H_SYNC - 1)) begin
+                hsync=0;
+                j=0;
+            end
+            ///////////////////////////////
         end
         else begin
-            vsync=1;
-            
+            vsync=0;
+            //Determination of hsync signal
+            if(j<(H_SYNC - 1)) begin
+                if(j<H_SYNCPULSE)begin
+                    hsync=1;
+                end
+                else begin
+                    hsync=0;
+                end
+                j=j+1;
+            end
+            else if (j==(H_SYNC - 1)) begin
+                hsync=0;
+                j=0;
+            end
+            ///////////////////////////////
+            //Determination of r,g and b signals
+            if((vsync==0)&&(hsync==0))begin
+            r=rIn;
+            g=gIn;
+            b=bIn;
+            end
+            else begin
+            r=0;
+            g=0;
+            b=0;
+            end
+            ///////////////////////////////
+        end
+        i=i+1;
+    end
+    else if (i==((V_SYNC * H_SYNC)-1)) begin
+        vsync=0;
+        i=0;
+        //Determination of hsync signal
+        if(j<(H_SYNC - 1)) begin
+            if(j<H_SYNCPULSE)begin
+                    hsync=1;
+            end
+            else begin
+                hsync=0;
+            end
+            j=j+1;
+        end
+        else if (j==(H_SYNC - 1)) begin
+            hsync=0;
+            j=0;
+        end
+        ///////////////////////////////
+        //Determination of r,g and b signals
+        if((vsync==0)&&(hsync==0))begin
+            r=rIn;
+            g=gIn;
+            b=bIn;
+        end
+        else begin
+            r=0;
+            g=0;
+            b=0;
+        end
+        ///////////////////////////////
+    end
+end
+
+
+
+
+
+
+        ////////////////////////////////////////////////////////////////
+        /*
+            vsync=0;   
             //if((i>=V_SYNCPULSE)&&(i<(V_SYNCPULSE + V_BPORCH)))begin
-            if(i<(V_SYNCPULSE + V_BPORCH))begin
+            if(i<((V_SYNCPULSE + V_BPORCH)*H_SYNC))begin
             r=0;
             g=0;
             v=0;
             end
             //elseif((i>=(V_SYNCPULSE + V_BPORCH))&&(i<(V_SYNCPULSE + V_BPORCH + V_DISPLAY)) begin
-            else if(i<(V_SYNCPULSE + V_BPORCH + V_DISPLAY))begin
+            else if(i<((V_SYNCPULSE + V_BPORCH + V_DISPLAY)*H_SYNC))begin
 
             end
-            else if(i<(V_SYNCPULSE + V_BPORCH + V_DISPLAY + V_FPORCH))begin
-
+            else if(i<((V_SYNCPULSE + V_BPORCH + V_DISPLAY + V_FPORCH)*H_SYNC))begin
+            r=0;
+            g=0;
+            v=0; 
             end
             else begin
             r=0;
@@ -69,14 +157,8 @@ always @(posedge(clk)) begin
         //y agregar aca que se manda por el wire de cada señal
     end
 end
+*/
 
-always
-	begin: CLOCK_DRIVER
-		clk <= 1'b0;
-		#(PERIOD/2);
-		clk <= 1'b1;
-		#(PERIOD/2);
-	end
 
 //parameter ADDRESS, HFPORCH=16, HBPORCH=48, HSYNC=800, VSYNC=40n; //posicion de memoria donde arranca a estar guardada la pantalla que voy a mostrar.
 //VER que poner en address, fporch, bporch

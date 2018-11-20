@@ -1,3 +1,4 @@
+
 `timescale 20000ps / 2000ps
 
 module clock_gen_in(clk);
@@ -54,3 +55,4 @@ always @(posedge clkin) begin
         counter <= counter -1;
     end
 end
+

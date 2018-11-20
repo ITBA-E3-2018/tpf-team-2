@@ -1,6 +1,6 @@
 `timescale 100us / 100us
 
-module Clock_gen(clk);
+module Clockgen(clk);
 
 parameter PERIOD = 10;
 
