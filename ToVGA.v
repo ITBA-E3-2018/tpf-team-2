@@ -27,20 +27,27 @@ always @(posedge(clk)) begin
             //ver hsync
         end
         else begin
-        vsync=0;
+            vsync=0;
         end
-    i=i+1;
+        i=i+1;
     end
     else if (i==((V_SYNC * H_SYNC)-1)) begin
-    vsync=0;
-    i=0;
+        vsync=0;
+        i=0;
     end
 //Determination of hsync signal
     if(j<(H_SYNC - 1)) begin
-
+        if(j<H_SYNCPULSE)begin
+            hsync=1;
+        end
+        else begin
+            hsync=0;
+        end
+        j=j+1;
     end
     else if (j==(H_SYNC - 1)) begin
-
+        hsync=0;
+        j=0;
     end
 
 end
