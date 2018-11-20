@@ -1,6 +1,6 @@
-`include "./contadorN.v"
-`include "./count2watch.v"
-`include "./bin2bcd.v"
+//`include "./contadorN.v"
+//`include "./count2watch.v"
+//`include "./bin2bcd.v"
 
 module contador_final (
     NEclk,                              // Negative-edge clock

@@ -25,7 +25,8 @@ always @ (negedge NEclk or Nreset) begin
     else begin
         if (Enable == 1'b1) begin
             count <= #1 count + 1;
-        end else begin
+        end 
+		  else begin
             count <= #1 count;
         end
     end
