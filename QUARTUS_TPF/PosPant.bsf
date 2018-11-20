@@ -26,15 +26,15 @@ refer to the applicable agreement for further details.
 	(port
 		(pt 0 32)
 		(input)
-		(text "v_sinc" (rect 0 0 27 12)(font "Arial" ))
-		(text "v_sinc" (rect 21 27 48 39)(font "Arial" ))
+		(text "h_sinc" (rect 0 0 25 12)(font "Arial" ))
+		(text "h_sinc" (rect 21 27 46 39)(font "Arial" ))
 		(line (pt 0 32)(pt 16 32)(line_width 1))
 	)
 	(port
 		(pt 0 48)
 		(input)
-		(text "h_sinc" (rect 0 0 25 12)(font "Arial" ))
-		(text "h_sinc" (rect 21 43 46 55)(font "Arial" ))
+		(text "v_sinc" (rect 0 0 27 12)(font "Arial" ))
+		(text "v_sinc" (rect 21 43 48 55)(font "Arial" ))
 		(line (pt 0 48)(pt 16 48)(line_width 1))
 	)
 	(port
@@ -108,6 +108,16 @@ refer to the applicable agreement for further details.
 		(line (pt 152 64)(pt 136 64)(line_width 1))
 	)
 	(parameter
+		"RETARDO_H"
+		"48"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"RETARDO_V"
+		"33"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
 		"HOR_min"
 		"295"
 		""
@@ -119,72 +129,72 @@ refer to the applicable agreement for further details.
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
 		"VER_min"
-		"235"
+		""
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
 		"VER_max"
-		"244"
+		""
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
-		"DH1m"
-		"295"
+		"DH1min"
+		""
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
 		"DH1M"
-		"300"
+		""
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
-		"DH2m"
-		"303"
+		"DH2min"
+		""
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
 		"DH2M"
-		"308"
+		""
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
-		"DH3m"
-		"313"
+		"DH3min"
+		""
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
 		"DH3M"
-		"318"
+		""
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
-		"DH4m"
-		"321"
+		"DH4min"
+		""
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
 		"DH4M"
-		"326"
+		""
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
-		"DH5m"
-		"331"
+		"DH5min"
+		""
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
 		"DH5M"
-		"336"
+		""
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
-		"DH6m"
-		"339"
+		"DH6min"
+		""
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
 		"DH6M"
-		"344"
+		""
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(drawing

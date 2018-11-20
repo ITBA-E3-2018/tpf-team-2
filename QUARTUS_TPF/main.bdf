@@ -193,15 +193,15 @@ refer to the applicable agreement for further details.
 	(port
 		(pt 0 32)
 		(input)
-		(text "v_sinc" (rect 0 0 33 12)(font "Arial" ))
-		(text "v_sinc" (rect 21 27 54 39)(font "Arial" ))
+		(text "h_sinc" (rect 0 0 31 12)(font "Arial" ))
+		(text "h_sinc" (rect 21 27 52 39)(font "Arial" ))
 		(line (pt 0 32)(pt 16 32))
 	)
 	(port
 		(pt 0 48)
 		(input)
-		(text "h_sinc" (rect 0 0 31 12)(font "Arial" ))
-		(text "h_sinc" (rect 21 43 52 55)(font "Arial" ))
+		(text "v_sinc" (rect 0 0 33 12)(font "Arial" ))
+		(text "v_sinc" (rect 21 43 54 55)(font "Arial" ))
 		(line (pt 0 48)(pt 16 48))
 	)
 	(port
@@ -275,6 +275,16 @@ refer to the applicable agreement for further details.
 		(line (pt 152 64)(pt 136 64))
 	)
 	(parameter
+		"RETARDO_H"
+		"48"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"RETARDO_V"
+		"33"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
 		"HOR_min"
 		"295"
 		""
@@ -295,8 +305,8 @@ refer to the applicable agreement for further details.
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
-		"DH1m"
-		"300"
+		"DH1min"
+		""
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
@@ -305,8 +315,8 @@ refer to the applicable agreement for further details.
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
-		"DH2m"
-		"308"
+		"DH2min"
+		""
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
@@ -315,8 +325,8 @@ refer to the applicable agreement for further details.
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
-		"DH3m"
-		"318"
+		"DH3min"
+		""
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
@@ -325,8 +335,8 @@ refer to the applicable agreement for further details.
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
-		"DH4m"
-		"326"
+		"DH4min"
+		""
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
@@ -335,8 +345,8 @@ refer to the applicable agreement for further details.
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
-		"DH5m"
-		"336"
+		"DH5min"
+		""
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
@@ -345,8 +355,8 @@ refer to the applicable agreement for further details.
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
-		"DH6m"
-		"344"
+		"DH6min"
+		""
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter

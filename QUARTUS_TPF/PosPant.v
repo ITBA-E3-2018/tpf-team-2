@@ -1,4 +1,4 @@
-module PosPant(v_sinc,h_sinc,h1,h0,m1,m0,s1,s0,Rout,Gout,Bout,clk);//, countH,countV, inside, test);
+module PosPant(h_sinc,v_sinc,h1,h0,m1,m0,s1,s0,Rout,Gout,Bout,clk);//, countH,countV, inside, test);
     input h_sinc,v_sinc,clk;
     input [3:0] h1;
     input [3:0] h0;
@@ -8,7 +8,7 @@ module PosPant(v_sinc,h_sinc,h1,h0,m1,m0,s1,s0,Rout,Gout,Bout,clk);//, countH,co
     input [3:0] s0;
     output reg Rout,Gout,Bout;
     reg colorOut;
-    reg inside_;
+    reg inside;
     reg[10:0] posX;
     reg[10:0]posY;
     reg[10:0]posX1;
@@ -16,76 +16,82 @@ module PosPant(v_sinc,h_sinc,h1,h0,m1,m0,s1,s0,Rout,Gout,Bout,clk);//, countH,co
     reg[10:0]despl;
     reg[3:0] num;
     wire[6:0] disp7;
-    /*output*/ reg [10:0] countV;
-    /*output*/ reg [10:0] countH;
-    //output reg test;
-    parameter HOR_min=295, HOR_max=345, VER_min=235, VER_max=244;
-    parameter DH1m=295,DH1M=300, DH2m=303, DH2M=308, DH3m=313, DH3M=318, DH4m=321, DH4M=326, DH5m=331, DH5M=336, DH6m=339, DH6M = 344;
+    reg [10:0] countV;
+    reg [10:0] countH;
+    parameter RETARDO_H = 48, RETARDO_V=33;
+    parameter HOR_min=295, HOR_max=345, VER_min=(235+RETARDO_V), VER_max=(244+RETARDO_V);
+    parameter DH1min=(295+RETARDO_H),DH1M=(300+RETARDO_H), DH2min=(303+RETARDO_H), DH2M=(308+RETARDO_H),
+        DH3min=(313+RETARDO_H), DH3M=(318+RETARDO_H), DH4min=(321+RETARDO_H), DH4M=(326+RETARDO_H), DH5min=(331+RETARDO_H),
+        DH5M=(336+RETARDO_H), DH6min=(339+RETARDO_H), DH6M = (344+RETARDO_H);
+
 
     NumTo7Seg Disp(num,disp7);
 
 
     always @(posedge clk) begin
         countH = countH+1;
-        if(countH >= 640) begin//Probar cabiando esto por (1)
-            countV = countV+1; //
-            countH = 0;         //
-        end
+		  if(countH >= 800) begin
+				countH=0;
+				countV = countV+1;
+		  end
+		  if(countV >= 525) begin
+				countV = 0;
+				countH=0;
+		  end
     end
+    //always @ (negedge v_sinc) begin
+    //   countV = 0;
+    //end
 
-    always @ (posedge v_sinc) begin
-        countV = 0;
-    end
-
-    always @ (posedge h_sinc) begin
-        countH=0;
-        //assign countV = countV+1;    //     (1)
-    end
+    //always @ (negedge h_sinc) begin
+    //    countH = 0;
+    //    countV = countV+1;
+    //end
     
     always @(*) begin
         if(countV >= VER_min && countV <= VER_max) begin
             if(countH >= HOR_min && countH <= HOR_max)begin
-                inside_ = 1;
+                inside = 1;
             end
             else begin
-                inside_ = 0;
+                inside = 0;
             end
         end
         else begin
-            inside_ = 0;
+            inside = 0;
         end
 
         posX = countH;
         posY = countV;
         posY1 = countV-VER_min;
-        if(inside_ == 0) begin
+        if(inside == 0) begin
             colorOut = 0;
         end
 
-        if(inside_ == 1) begin
-            if(posX>=DH1m && posX <=DH1M) begin
+        if(inside == 1) begin
+            if(posX>=DH1min && posX <=DH1M) begin
                 num = h1;
-                despl = DH1m;
+                despl = DH1min;
             end
-            if(posX>=DH2m && posX<=DH2M) begin
+            if(posX>=DH2min && posX<=DH2M) begin
                 num = h0;
-                despl = DH2m;
+                despl = DH2min;
             end
-            if(posX>=DH3m && posX<=DH3M) begin
+            if(posX>=DH3min && posX<=DH3M) begin
                 num = m1;
-                despl = DH3m;
+                despl = DH3min;
             end
-            if(posX>=DH4m && posX<=DH4M) begin
+            if(posX>=DH4min && posX<=DH4M) begin
                 num = m0;
-                despl = DH4m;
+                despl = DH4min;
             end
-            if(posX>=DH5m && posX<=DH5M) begin
+            if(posX>=DH5min && posX<=DH5M) begin
                 num = s1;
-                despl = DH5m;
+                despl = DH5min;
             end
-            if(posX>=DH6m && posX<=DH6M) begin
+            if(posX>=DH6min && posX<=DH6M) begin
                 num = s0;
-                despl = DH6m;
+                despl = DH6min;
             end
             posX1 = countH-despl;
         end
@@ -95,7 +101,6 @@ module PosPant(v_sinc,h_sinc,h1,h0,m1,m0,s1,s0,Rout,Gout,Bout,clk);//, countH,co
         end
         if(posY1==0)begin
             if(posX1==0 || posX1 == 4) begin
-                //test = 1;
                 colorOut = 0;
             end
             if(posX1==1 || posX1 == 2 || posX1==3) begin
@@ -187,6 +192,8 @@ module PosPant(v_sinc,h_sinc,h1,h0,m1,m0,s1,s0,Rout,Gout,Bout,clk);//, countH,co
         Gout = colorOut;
         Bout = colorOut;
     end
+
+
 
 
 endmodule

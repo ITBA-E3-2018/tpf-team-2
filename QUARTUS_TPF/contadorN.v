@@ -18,7 +18,7 @@ wire NEclk, Nreset, Enable;
 reg [BITS-1 : 0] count;
 
 // Code
-always @ (negedge NEclk or Nreset) begin
+always @ (negedge NEclk or negedge Nreset) begin
     if(Nreset == 1'b0) begin
         count <= 0;
     end
