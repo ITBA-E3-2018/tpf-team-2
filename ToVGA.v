@@ -1,8 +1,9 @@
 
-module ToVGA (clk,hsync,vsync,rIn, gIn,bIn,r,g,b);
+module ToVGA (clk, rIn, gIn, bIn, hsync, vsync, r, g, b);
 input wire clk,rIn, gIn, bIn;
-output reg hsync,vsync,r,g,b;
-reg pantalla[0:479] x [0:639];
+output reg hsync,vsync;
+output wire r,g,b;
+//reg pantalla[0:479] x [0:639];
 integer i,j;
 initial i=0,j=0;
 
@@ -63,38 +64,46 @@ always @(posedge(clk)) begin
             g=gIn;
             b=bIn;
             end
+            else begin
+            r=0;
+            g=0;
+            b=0;
+            end
+            ///////////////////////////////
         end
         i=i+1;
     end
     else if (i==((V_SYNC * H_SYNC)-1)) begin
         vsync=0;
         i=0;
-    end
-
-
-
-
-
-
-
-
-
-//Determination of hsync signal
-    if(j<(H_SYNC - 1)) begin
-        if(j<H_SYNCPULSE)begin
-            hsync=1;
+        //Determination of hsync signal
+        if(j<(H_SYNC - 1)) begin
+            if(j<H_SYNCPULSE)begin
+                    hsync=1;
+            end
+            else begin
+                hsync=0;
+            end
+            j=j+1;
+        end
+        else if (j==(H_SYNC - 1)) begin
+            hsync=0;
+            j=0;
+        end
+        ///////////////////////////////
+        //Determination of r,g and b signals
+        if((vsync==0)&&(hsync==0))begin
+            r=rIn;
+            g=gIn;
+            b=bIn;
         end
         else begin
-            hsync=0;
+            r=0;
+            g=0;
+            b=0;
         end
-        j=j+1;
+        ///////////////////////////////
     end
-    else if (j==(H_SYNC - 1)) begin
-        hsync=0;
-        j=0;
-    end
-
-
 end
 
 
