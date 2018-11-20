@@ -96,7 +96,7 @@ module PosPant(h_sinc,v_sinc,h1,h0,m1,m0,s1,s0,Rout,Gout,Bout,clk);//, countH,co
         end
         if(posY1==0)begin
             if(posX1==0 || posX1 == 4) begin
-                test = 1;
+                //test = 1;
                 colorOut = 0;
             end
             if(posX1==1 || posX1 == 2 || posX1==3) begin
