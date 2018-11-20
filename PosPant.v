@@ -28,9 +28,9 @@ module PosPant(h_sinc,v_sinc,h1,h0,m1,m0,s1,s0,Rout,Gout,Bout,clk);//, countH,co
 
     always @(posedge clk) begin
         countH = countH+1;
-        if(countH >= 640) begin
-            countV = countV+1;
-            countH = 0;
+        if(countH >= 640) begin//Probar cabiando esto por (1)
+            countV = countV+1; //
+            countH = 0;         //
         end
     end
 
@@ -40,6 +40,7 @@ module PosPant(h_sinc,v_sinc,h1,h0,m1,m0,s1,s0,Rout,Gout,Bout,clk);//, countH,co
 
     always @ (posedge h_sinc) begin
         countH=0;
+        //assign countV = countV+1;    //     (1)
     end
     
     always @(*) begin
