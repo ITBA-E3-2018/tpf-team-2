@@ -1,1 +1,5 @@
-Warning (10268): Verilog HDL information at PosPant.v(39): always construct contains both blocking and non-blocking assignments File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/PosPant.v Line: 39
+Info (10281): Verilog HDL Declaration information at PosPant.v(220): object "disp2" differs only in case from object "Disp2" in the same scope File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/PosPant.v Line: 220
+Info (10281): Verilog HDL Declaration information at PosPant.v(221): object "disp3" differs only in case from object "Disp3" in the same scope File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/PosPant.v Line: 221
+Info (10281): Verilog HDL Declaration information at PosPant.v(222): object "disp4" differs only in case from object "Disp4" in the same scope File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/PosPant.v Line: 222
+Info (10281): Verilog HDL Declaration information at PosPant.v(223): object "disp5" differs only in case from object "Disp5" in the same scope File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/PosPant.v Line: 223
+Info (10281): Verilog HDL Declaration information at PosPant.v(224): object "disp6" differs only in case from object "Disp6" in the same scope File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/PosPant.v Line: 224

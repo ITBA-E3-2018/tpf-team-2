@@ -1,5 +1,5 @@
 Analysis & Synthesis report for TPF00
-Tue Nov 20 16:36:52 2018
+Tue Nov 20 21:43:02 2018
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -14,22 +14,33 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis IP Cores Summary
-  9. User-Specified and Inferred Latches
- 10. Registers Removed During Synthesis
- 11. General Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Parameter Settings for User Entity Instance: VGA:inst|Vsync:myvsync
- 14. Parameter Settings for User Entity Instance: VGA:inst|Hsync:myhsync
- 15. Parameter Settings for User Entity Instance: pll:inst1|altpll:altpll_component
- 16. Parameter Settings for User Entity Instance: PosPant:inst2
- 17. Parameter Settings for User Entity Instance: PosPant:inst2|NumTo7Seg:Disp
- 18. Parameter Settings for User Entity Instance: contador_final:inst3
- 19. Parameter Settings for User Entity Instance: contador_final:inst3|contadorN:counter
- 20. Parameter Settings for User Entity Instance: contador_final:inst3|count2watch:watch_data
- 21. altpll Parameter Settings by Entity Instance
- 22. Post-Synthesis Netlist Statistics for Top Partition
- 23. Elapsed Time Per Partition
- 24. Analysis & Synthesis Messages
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: VGA:inst|Vsync:myvsync
+ 13. Parameter Settings for User Entity Instance: VGA:inst|Hsync:myhsync
+ 14. Parameter Settings for User Entity Instance: pll:inst1|altpll:altpll_component
+ 15. Parameter Settings for User Entity Instance: PosPant:inst2
+ 16. Parameter Settings for User Entity Instance: PosPant:inst2|NumTo7Seg:Disp
+ 17. Parameter Settings for User Entity Instance: PosPant:inst2|NumTo7Seg:Disp2
+ 18. Parameter Settings for User Entity Instance: PosPant:inst2|NumTo7Seg:Disp3
+ 19. Parameter Settings for User Entity Instance: PosPant:inst2|NumTo7Seg:Disp4
+ 20. Parameter Settings for User Entity Instance: PosPant:inst2|NumTo7Seg:Disp5
+ 21. Parameter Settings for User Entity Instance: PosPant:inst2|NumTo7Seg:Disp6
+ 22. Parameter Settings for User Entity Instance: contador_final:inst3
+ 23. Parameter Settings for User Entity Instance: contador_final:inst3|contadorN:counter
+ 24. Parameter Settings for User Entity Instance: contador_final:inst3|count2watch:watch_data
+ 25. altpll Parameter Settings by Entity Instance
+ 26. Port Connectivity Checks: "PosPant:inst2|NumTo7Seg:Disp6"
+ 27. Port Connectivity Checks: "PosPant:inst2|NumTo7Seg:Disp5"
+ 28. Port Connectivity Checks: "PosPant:inst2|NumTo7Seg:Disp4"
+ 29. Port Connectivity Checks: "PosPant:inst2|NumTo7Seg:Disp3"
+ 30. Port Connectivity Checks: "PosPant:inst2|NumTo7Seg:Disp2"
+ 31. Port Connectivity Checks: "PosPant:inst2|NumTo7Seg:Disp"
+ 32. Post-Synthesis Netlist Statistics for Top Partition
+ 33. Elapsed Time Per Partition
+ 34. Analysis & Synthesis Messages
+ 35. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -55,16 +66,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Nov 20 16:36:51 2018       ;
+; Analysis & Synthesis Status        ; Successful - Tue Nov 20 21:43:01 2018       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; TPF00                                       ;
 ; Top-level Entity Name              ; main                                        ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 286                                         ;
-;     Total combinational functions  ; 284                                         ;
-;     Dedicated logic registers      ; 89                                          ;
-; Total registers                    ; 89                                          ;
-; Total pins                         ; 6                                           ;
+; Total logic elements               ; 262                                         ;
+;     Total combinational functions  ; 260                                         ;
+;     Dedicated logic registers      ; 115                                         ;
+; Total registers                    ; 115                                         ;
+; Total pins                         ; 8                                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -206,23 +217,23 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                        ;
 +---------------------------------------------+------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 286                                                                          ;
+; Estimated Total logic elements              ; 262                                                                          ;
 ;                                             ;                                                                              ;
-; Total combinational functions               ; 284                                                                          ;
+; Total combinational functions               ; 260                                                                          ;
 ; Logic element usage by number of LUT inputs ;                                                                              ;
-;     -- 4 input functions                    ; 103                                                                          ;
-;     -- 3 input functions                    ; 65                                                                           ;
+;     -- 4 input functions                    ; 102                                                                          ;
+;     -- 3 input functions                    ; 42                                                                           ;
 ;     -- <=2 input functions                  ; 116                                                                          ;
 ;                                             ;                                                                              ;
 ; Logic elements by mode                      ;                                                                              ;
-;     -- normal mode                          ; 182                                                                          ;
+;     -- normal mode                          ; 158                                                                          ;
 ;     -- arithmetic mode                      ; 102                                                                          ;
 ;                                             ;                                                                              ;
-; Total registers                             ; 89                                                                           ;
-;     -- Dedicated logic registers            ; 89                                                                           ;
+; Total registers                             ; 115                                                                          ;
+;     -- Dedicated logic registers            ; 115                                                                          ;
 ;     -- I/O registers                        ; 0                                                                            ;
 ;                                             ;                                                                              ;
-; I/O pins                                    ; 6                                                                            ;
+; I/O pins                                    ; 8                                                                            ;
 ;                                             ;                                                                              ;
 ; Embedded Multiplier 9-bit elements          ; 0                                                                            ;
 ;                                             ;                                                                              ;
@@ -230,9 +241,9 @@ refer to the applicable agreement for further details.
 ;     -- PLLs                                 ; 1                                                                            ;
 ;                                             ;                                                                              ;
 ; Maximum fan-out node                        ; pll:inst1|altpll:altpll_component|pll_altpll:auto_generated|wire_pll1_clk[0] ;
-; Maximum fan-out                             ; 90                                                                           ;
-; Total fan-out                               ; 1049                                                                         ;
-; Average fan-out                             ; 2.72                                                                         ;
+; Maximum fan-out                             ; 116                                                                          ;
+; Total fan-out                               ; 1061                                                                         ;
+; Average fan-out                             ; 2.71                                                                         ;
 +---------------------------------------------+------------------------------------------------------------------------------+
 
 
@@ -241,12 +252,12 @@ refer to the applicable agreement for further details.
 +--------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------+-------------+--------------+
 ; Compilation Hierarchy Node           ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                               ; Entity Name ; Library Name ;
 +--------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------+-------------+--------------+
-; |main                                ; 284 (0)             ; 89 (0)                    ; 0           ; 0            ; 0       ; 0         ; 6    ; 0            ; |main                                                             ; main        ; work         ;
-;    |PosPant:inst2|                   ; 106 (106)           ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|PosPant:inst2                                               ; PosPant     ; work         ;
-;    |VGA:inst|                        ; 178 (0)             ; 69 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|VGA:inst                                                    ; VGA         ; work         ;
-;       |Hsync:myhsync|                ; 84 (84)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|VGA:inst|Hsync:myhsync                                      ; Hsync       ; work         ;
-;       |RGB:myRGB|                    ; 1 (1)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|VGA:inst|RGB:myRGB                                          ; RGB         ; work         ;
-;       |Vsync:myvsync|                ; 93 (93)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|VGA:inst|Vsync:myvsync                                      ; Vsync       ; work         ;
+; |main                                ; 260 (0)             ; 115 (0)                   ; 0           ; 0            ; 0       ; 0         ; 8    ; 0            ; |main                                                             ; main        ; work         ;
+;    |PosPant:inst2|                   ; 64 (64)             ; 44 (44)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|PosPant:inst2                                               ; PosPant     ; work         ;
+;    |VGA:inst|                        ; 196 (0)             ; 71 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|VGA:inst                                                    ; VGA         ; work         ;
+;       |Hsync:myhsync|                ; 86 (86)             ; 34 (34)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|VGA:inst|Hsync:myhsync                                      ; Hsync       ; work         ;
+;       |RGB:myRGB|                    ; 10 (10)             ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|VGA:inst|RGB:myRGB                                          ; RGB         ; work         ;
+;       |Vsync:myvsync|                ; 100 (100)           ; 34 (34)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|VGA:inst|Vsync:myvsync                                      ; Vsync       ; work         ;
 ;    |pll:inst1|                       ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|pll:inst1                                                   ; pll         ; work         ;
 ;       |altpll:altpll_component|      ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|pll:inst1|altpll:altpll_component                           ; altpll      ; work         ;
 ;          |pll_altpll:auto_generated| ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|pll:inst1|altpll:altpll_component|pll_altpll:auto_generated ; pll_altpll  ; work         ;
@@ -263,27 +274,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+-----------------+-----------------+
 
 
-+------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                  ;
-+----------------------------------------------------+------------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal    ; Free of Timing Hazards ;
-+----------------------------------------------------+------------------------+------------------------+
-; PosPant:inst2|colorOut                             ; PosPant:inst2|colorOut ; yes                    ;
-; Number of user-specified and inferred latches = 1  ;                        ;                        ;
-+----------------------------------------------------+------------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
-
-
-+----------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                           ;
-+-----------------------------------------------------+----------------------------------------+
-; Register name                                       ; Reason for Removal                     ;
-+-----------------------------------------------------+----------------------------------------+
-; contador_final:inst3|contadorN:counter|count[0..28] ; Stuck at GND due to stuck port clear   ;
-; PosPant:inst2|countH[10]                            ; Stuck at GND due to stuck port data_in ;
-; PosPant:inst2|countV[10]                            ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 31              ;                                        ;
-+-----------------------------------------------------+----------------------------------------+
++--------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                         ;
++-----------------------------------------------------+--------------------------------------+
+; Register name                                       ; Reason for Removal                   ;
++-----------------------------------------------------+--------------------------------------+
+; contador_final:inst3|contadorN:counter|count[0..28] ; Stuck at GND due to stuck port clear ;
+; Total Number of Removed Registers = 29              ;                                      ;
++-----------------------------------------------------+--------------------------------------+
 
 
 +------------------------------------------------------+
@@ -291,12 +289,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 89    ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 115   ;
+; Number of registers using Synchronous Clear  ; 22    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 31    ;
+; Number of registers using Clock Enable       ; 33    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -306,12 +304,8 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
-; 3:1                ; 33 bits   ; 66 LEs        ; 33 LEs               ; 33 LEs                 ; Yes        ; |main|VGA:inst|Vsync:myvsync|i[12] ;
-; 3:1                ; 33 bits   ; 66 LEs        ; 33 LEs               ; 33 LEs                 ; Yes        ; |main|VGA:inst|Hsync:myhsync|i[8]  ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |main|PosPant:inst2|countH[8]      ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |main|PosPant:inst2|despl[2]       ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |main|PosPant:inst2|despl[5]       ;
-; 7:1                ; 7 bits    ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |main|PosPant:inst2|despl          ;
+; 3:1                ; 34 bits   ; 68 LEs        ; 34 LEs               ; 34 LEs                 ; Yes        ; |main|VGA:inst|Vsync:myvsync|i[20] ;
+; 3:1                ; 34 bits   ; 68 LEs        ; 34 LEs               ; 34 LEs                 ; Yes        ; |main|VGA:inst|Hsync:myhsync|i[17] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
 
 
@@ -723,24 +717,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-----------------------------------+
 ; Parameter Name ; Value ; Type                              ;
 +----------------+-------+-----------------------------------+
-; RETARDO_H      ; 48    ; Signed Integer                    ;
-; RETARDO_V      ; 33    ; Signed Integer                    ;
-; HOR_min        ; 295   ; Signed Integer                    ;
-; HOR_max        ; 345   ; Signed Integer                    ;
-; VER_min        ; 235   ; Signed Integer                    ;
-; VER_max        ; 244   ; Signed Integer                    ;
-; DH1min         ; 343   ; Signed Integer                    ;
-; DH1M           ; 300   ; Signed Integer                    ;
-; DH2min         ; 351   ; Signed Integer                    ;
-; DH2M           ; 308   ; Signed Integer                    ;
-; DH3min         ; 361   ; Signed Integer                    ;
-; DH3M           ; 318   ; Signed Integer                    ;
-; DH4min         ; 369   ; Signed Integer                    ;
-; DH4M           ; 326   ; Signed Integer                    ;
-; DH5min         ; 379   ; Signed Integer                    ;
-; DH5M           ; 336   ; Signed Integer                    ;
-; DH6min         ; 387   ; Signed Integer                    ;
-; DH6M           ; 344   ; Signed Integer                    ;
+; OFFSETNUM      ; 20    ; Signed Integer                    ;
+; OFFSET_INIT_X  ; 220   ; Signed Integer                    ;
+; OFFSET_INIT_Y  ; 217   ; Signed Integer                    ;
+; BLOCK_SIZE     ; 5     ; Signed Integer                    ;
 +----------------+-------+-----------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -761,6 +741,101 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; EIGHT          ; 00000000000000000000000000001000 ; Unsigned Binary       ;
 ; NINE           ; 00000000000000000000000000001001 ; Unsigned Binary       ;
 +----------------+----------------------------------+-----------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: PosPant:inst2|NumTo7Seg:Disp2 ;
++----------------+----------------------------------+------------------------+
+; Parameter Name ; Value                            ; Type                   ;
++----------------+----------------------------------+------------------------+
+; ZERO           ; 00000000000000000000000000000000 ; Unsigned Binary        ;
+; ONE            ; 00000000000000000000000000000001 ; Unsigned Binary        ;
+; TWO            ; 00000000000000000000000000000010 ; Unsigned Binary        ;
+; THREE          ; 00000000000000000000000000000011 ; Unsigned Binary        ;
+; FOUR           ; 00000000000000000000000000000100 ; Unsigned Binary        ;
+; FIVE           ; 00000000000000000000000000000101 ; Unsigned Binary        ;
+; SIX            ; 00000000000000000000000000000110 ; Unsigned Binary        ;
+; SEVEN          ; 00000000000000000000000000000111 ; Unsigned Binary        ;
+; EIGHT          ; 00000000000000000000000000001000 ; Unsigned Binary        ;
+; NINE           ; 00000000000000000000000000001001 ; Unsigned Binary        ;
++----------------+----------------------------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: PosPant:inst2|NumTo7Seg:Disp3 ;
++----------------+----------------------------------+------------------------+
+; Parameter Name ; Value                            ; Type                   ;
++----------------+----------------------------------+------------------------+
+; ZERO           ; 00000000000000000000000000000000 ; Unsigned Binary        ;
+; ONE            ; 00000000000000000000000000000001 ; Unsigned Binary        ;
+; TWO            ; 00000000000000000000000000000010 ; Unsigned Binary        ;
+; THREE          ; 00000000000000000000000000000011 ; Unsigned Binary        ;
+; FOUR           ; 00000000000000000000000000000100 ; Unsigned Binary        ;
+; FIVE           ; 00000000000000000000000000000101 ; Unsigned Binary        ;
+; SIX            ; 00000000000000000000000000000110 ; Unsigned Binary        ;
+; SEVEN          ; 00000000000000000000000000000111 ; Unsigned Binary        ;
+; EIGHT          ; 00000000000000000000000000001000 ; Unsigned Binary        ;
+; NINE           ; 00000000000000000000000000001001 ; Unsigned Binary        ;
++----------------+----------------------------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: PosPant:inst2|NumTo7Seg:Disp4 ;
++----------------+----------------------------------+------------------------+
+; Parameter Name ; Value                            ; Type                   ;
++----------------+----------------------------------+------------------------+
+; ZERO           ; 00000000000000000000000000000000 ; Unsigned Binary        ;
+; ONE            ; 00000000000000000000000000000001 ; Unsigned Binary        ;
+; TWO            ; 00000000000000000000000000000010 ; Unsigned Binary        ;
+; THREE          ; 00000000000000000000000000000011 ; Unsigned Binary        ;
+; FOUR           ; 00000000000000000000000000000100 ; Unsigned Binary        ;
+; FIVE           ; 00000000000000000000000000000101 ; Unsigned Binary        ;
+; SIX            ; 00000000000000000000000000000110 ; Unsigned Binary        ;
+; SEVEN          ; 00000000000000000000000000000111 ; Unsigned Binary        ;
+; EIGHT          ; 00000000000000000000000000001000 ; Unsigned Binary        ;
+; NINE           ; 00000000000000000000000000001001 ; Unsigned Binary        ;
++----------------+----------------------------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: PosPant:inst2|NumTo7Seg:Disp5 ;
++----------------+----------------------------------+------------------------+
+; Parameter Name ; Value                            ; Type                   ;
++----------------+----------------------------------+------------------------+
+; ZERO           ; 00000000000000000000000000000000 ; Unsigned Binary        ;
+; ONE            ; 00000000000000000000000000000001 ; Unsigned Binary        ;
+; TWO            ; 00000000000000000000000000000010 ; Unsigned Binary        ;
+; THREE          ; 00000000000000000000000000000011 ; Unsigned Binary        ;
+; FOUR           ; 00000000000000000000000000000100 ; Unsigned Binary        ;
+; FIVE           ; 00000000000000000000000000000101 ; Unsigned Binary        ;
+; SIX            ; 00000000000000000000000000000110 ; Unsigned Binary        ;
+; SEVEN          ; 00000000000000000000000000000111 ; Unsigned Binary        ;
+; EIGHT          ; 00000000000000000000000000001000 ; Unsigned Binary        ;
+; NINE           ; 00000000000000000000000000001001 ; Unsigned Binary        ;
++----------------+----------------------------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: PosPant:inst2|NumTo7Seg:Disp6 ;
++----------------+----------------------------------+------------------------+
+; Parameter Name ; Value                            ; Type                   ;
++----------------+----------------------------------+------------------------+
+; ZERO           ; 00000000000000000000000000000000 ; Unsigned Binary        ;
+; ONE            ; 00000000000000000000000000000001 ; Unsigned Binary        ;
+; TWO            ; 00000000000000000000000000000010 ; Unsigned Binary        ;
+; THREE          ; 00000000000000000000000000000011 ; Unsigned Binary        ;
+; FOUR           ; 00000000000000000000000000000100 ; Unsigned Binary        ;
+; FIVE           ; 00000000000000000000000000000101 ; Unsigned Binary        ;
+; SIX            ; 00000000000000000000000000000110 ; Unsigned Binary        ;
+; SEVEN          ; 00000000000000000000000000000111 ; Unsigned Binary        ;
+; EIGHT          ; 00000000000000000000000000001000 ; Unsigned Binary        ;
+; NINE           ; 00000000000000000000000000001001 ; Unsigned Binary        ;
++----------------+----------------------------------+------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -811,29 +886,83 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+-----------------------------------+
 
 
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "PosPant:inst2|NumTo7Seg:Disp6"                                                      ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; out  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "PosPant:inst2|NumTo7Seg:Disp5"                                                      ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; out  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "PosPant:inst2|NumTo7Seg:Disp4"                                                      ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; out  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "PosPant:inst2|NumTo7Seg:Disp3"                                                      ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; out  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "PosPant:inst2|NumTo7Seg:Disp2"                                                      ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; out  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "PosPant:inst2|NumTo7Seg:Disp"                                                            ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; out[5..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 6                           ;
-; cycloneiii_ff         ; 89                          ;
-;     ENA               ; 31                          ;
-;     plain             ; 58                          ;
-; cycloneiii_lcell_comb ; 284                         ;
+; boundary_port         ; 8                           ;
+; cycloneiii_ff         ; 115                         ;
+;     ENA               ; 33                          ;
+;     SCLR              ; 22                          ;
+;     plain             ; 60                          ;
+; cycloneiii_lcell_comb ; 260                         ;
 ;     arith             ; 102                         ;
-;         2 data inputs ; 101                         ;
-;         3 data inputs ; 1                           ;
-;     normal            ; 182                         ;
-;         0 data inputs ; 4                           ;
-;         1 data inputs ; 2                           ;
-;         2 data inputs ; 9                           ;
-;         3 data inputs ; 64                          ;
-;         4 data inputs ; 103                         ;
+;         2 data inputs ; 91                          ;
+;         3 data inputs ; 11                          ;
+;     normal            ; 158                         ;
+;         1 data inputs ; 5                           ;
+;         2 data inputs ; 20                          ;
+;         3 data inputs ; 31                          ;
+;         4 data inputs ; 102                         ;
 ; cycloneiii_pll        ; 1                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 11.00                       ;
-; Average LUT depth     ; 6.02                        ;
+; Max LUT depth         ; 6.00                        ;
+; Average LUT depth     ; 4.08                        ;
 +-----------------------+-----------------------------+
 
 
@@ -842,7 +971,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:05     ;
+; Top            ; 00:00:04     ;
 +----------------+--------------+
 
 
@@ -852,7 +981,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Nov 20 16:35:49 2018
+    Info: Processing started: Tue Nov 20 21:42:15 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TPF00 -c TPF00
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -866,9 +995,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file hsync.v
     Info (12023): Found entity 1: Hsync File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/Hsync.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file rgb.v
     Info (12023): Found entity 1: RGB File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/RGB.v Line: 1
-Warning (10463): Verilog HDL Declaration warning at PosPant.v(11): "inside" is SystemVerilog-2005 keyword File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/PosPant.v Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file pospant.v
-    Info (12023): Found entity 1: PosPant File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/PosPant.v Line: 1
+    Info (12023): Found entity 1: PosPant File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/PosPant.v Line: 203
 Info (12021): Found 1 design units, including 1 entities, in source file numto7seg.v
     Info (12023): Found entity 1: NumTo7Seg File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/NumTo7Seg.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file count2watch.v
@@ -952,36 +1080,11 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/pll_
     Info (12023): Found entity 1: pll_altpll File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/pll_altpll.v Line: 29
 Info (12128): Elaborating entity "pll_altpll" for hierarchy "pll:inst1|altpll:altpll_component|pll_altpll:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altpll.tdf Line: 897
 Info (12128): Elaborating entity "PosPant" for hierarchy "PosPant:inst2"
-Warning (10036): Verilog HDL or VHDL warning at PosPant.v(13): object "posY" assigned a value but never read File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/PosPant.v Line: 13
-Warning (10230): Verilog HDL assignment warning at PosPant.v(32): truncated value with size 32 to match size of target (11) File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/PosPant.v Line: 32
-Warning (10230): Verilog HDL assignment warning at PosPant.v(35): truncated value with size 32 to match size of target (11) File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/PosPant.v Line: 35
-Warning (10230): Verilog HDL assignment warning at PosPant.v(66): truncated value with size 32 to match size of target (11) File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/PosPant.v Line: 66
-Warning (10230): Verilog HDL assignment warning at PosPant.v(74): truncated value with size 32 to match size of target (11) File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/PosPant.v Line: 74
-Warning (10230): Verilog HDL assignment warning at PosPant.v(78): truncated value with size 32 to match size of target (11) File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/PosPant.v Line: 78
-Warning (10230): Verilog HDL assignment warning at PosPant.v(82): truncated value with size 32 to match size of target (11) File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/PosPant.v Line: 82
-Warning (10230): Verilog HDL assignment warning at PosPant.v(86): truncated value with size 32 to match size of target (11) File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/PosPant.v Line: 86
-Warning (10230): Verilog HDL assignment warning at PosPant.v(90): truncated value with size 32 to match size of target (11) File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/PosPant.v Line: 90
-Warning (10230): Verilog HDL assignment warning at PosPant.v(94): truncated value with size 32 to match size of target (11) File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/PosPant.v Line: 94
-Warning (10240): Verilog HDL Always Construct warning at PosPant.v(52): inferring latch(es) for variable "colorOut", which holds its previous value in one or more paths through the always construct File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/PosPant.v Line: 52
-Warning (10240): Verilog HDL Always Construct warning at PosPant.v(52): inferring latch(es) for variable "num", which holds its previous value in one or more paths through the always construct File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/PosPant.v Line: 52
-Warning (10240): Verilog HDL Always Construct warning at PosPant.v(52): inferring latch(es) for variable "despl", which holds its previous value in one or more paths through the always construct File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/PosPant.v Line: 52
-Info (10041): Inferred latch for "colorOut" at PosPant.v(116) File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/PosPant.v Line: 116
-Info (10041): Inferred latch for "despl[0]" at PosPant.v(99) File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/PosPant.v Line: 99
-Info (10041): Inferred latch for "despl[1]" at PosPant.v(99) File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/PosPant.v Line: 99
-Info (10041): Inferred latch for "despl[2]" at PosPant.v(99) File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/PosPant.v Line: 99
-Info (10041): Inferred latch for "despl[3]" at PosPant.v(99) File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/PosPant.v Line: 99
-Info (10041): Inferred latch for "despl[4]" at PosPant.v(99) File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/PosPant.v Line: 99
-Info (10041): Inferred latch for "despl[5]" at PosPant.v(99) File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/PosPant.v Line: 99
-Info (10041): Inferred latch for "despl[6]" at PosPant.v(99) File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/PosPant.v Line: 99
-Info (10041): Inferred latch for "despl[7]" at PosPant.v(99) File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/PosPant.v Line: 99
-Info (10041): Inferred latch for "despl[8]" at PosPant.v(99) File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/PosPant.v Line: 99
-Info (10041): Inferred latch for "despl[9]" at PosPant.v(99) File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/PosPant.v Line: 99
-Info (10041): Inferred latch for "despl[10]" at PosPant.v(99) File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/PosPant.v Line: 99
-Info (10041): Inferred latch for "num[0]" at PosPant.v(99) File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/PosPant.v Line: 99
-Info (10041): Inferred latch for "num[1]" at PosPant.v(99) File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/PosPant.v Line: 99
-Info (10041): Inferred latch for "num[2]" at PosPant.v(99) File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/PosPant.v Line: 99
-Info (10041): Inferred latch for "num[3]" at PosPant.v(99) File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/PosPant.v Line: 99
-Info (12128): Elaborating entity "NumTo7Seg" for hierarchy "PosPant:inst2|NumTo7Seg:Disp" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/PosPant.v Line: 28
+Warning (10230): Verilog HDL assignment warning at PosPant.v(244): truncated value with size 32 to match size of target (11) File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/PosPant.v Line: 244
+Warning (10230): Verilog HDL assignment warning at PosPant.v(250): truncated value with size 32 to match size of target (11) File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/PosPant.v Line: 250
+Warning (10230): Verilog HDL assignment warning at PosPant.v(255): truncated value with size 32 to match size of target (11) File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/PosPant.v Line: 255
+Warning (10230): Verilog HDL assignment warning at PosPant.v(258): truncated value with size 32 to match size of target (11) File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/PosPant.v Line: 258
+Info (12128): Elaborating entity "NumTo7Seg" for hierarchy "PosPant:inst2|NumTo7Seg:Disp" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/PosPant.v Line: 230
 Info (12128): Elaborating entity "contador_final" for hierarchy "contador_final:inst3"
 Info (12128): Elaborating entity "contadorN" for hierarchy "contador_final:inst3|contadorN:counter" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/contador_final.v Line: 49
 Warning (10230): Verilog HDL assignment warning at contadorN.v(27): truncated value with size 32 to match size of target (29) File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/contadorN.v Line: 27
@@ -1000,23 +1103,28 @@ Warning (10230): Verilog HDL assignment warning at bin2bcd.v(45): truncated valu
 Warning (10230): Verilog HDL assignment warning at bin2bcd.v(47): truncated value with size 32 to match size of target (4) File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/bin2bcd.v Line: 47
 Warning (10230): Verilog HDL assignment warning at bin2bcd.v(48): truncated value with size 32 to match size of target (4) File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/bin2bcd.v Line: 48
 Warning (10230): Verilog HDL assignment warning at bin2bcd.v(49): truncated value with size 32 to match size of target (4) File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/bin2bcd.v Line: 49
-Warning (13012): Latch PosPant:inst2|colorOut has unsafe behavior File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/PosPant.v Line: 116
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal PosPant:inst2|countV[5] File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/PosPant.v Line: 31
 Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/output_files/TPF00.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "Nres"
     Warning (15610): No output dependent on input pin "Enable"
-Info (21057): Implemented 294 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 283 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 3 output pins
-    Info (21061): Implemented 287 logic cells
+    Info (21059): Implemented 5 output pins
+    Info (21061): Implemented 274 logic cells
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 38 warnings
-    Info: Peak virtual memory: 4789 megabytes
-    Info: Processing ended: Tue Nov 20 16:36:52 2018
-    Info: Elapsed time: 00:01:03
-    Info: Total CPU time (on all processors): 00:02:00
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 26 warnings
+    Info: Peak virtual memory: 4775 megabytes
+    Info: Processing ended: Tue Nov 20 21:43:02 2018
+    Info: Elapsed time: 00:00:47
+    Info: Total CPU time (on all processors): 00:01:40
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/output_files/TPF00.map.smsg.
 
 

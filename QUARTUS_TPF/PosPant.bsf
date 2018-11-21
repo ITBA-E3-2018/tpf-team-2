@@ -108,93 +108,23 @@ refer to the applicable agreement for further details.
 		(line (pt 152 64)(pt 136 64)(line_width 1))
 	)
 	(parameter
-		"RETARDO_H"
-		"48"
+		"OFFSETNUM"
+		"20"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
-		"RETARDO_V"
-		"33"
+		"OFFSET_INIT_X"
+		"400"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
-		"HOR_min"
-		"295"
+		"OFFSET_INIT_Y"
+		"217"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
-		"HOR_max"
-		"345"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"VER_min"
-		""
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"VER_max"
-		""
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"DH1min"
-		""
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"DH1M"
-		""
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"DH2min"
-		""
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"DH2M"
-		""
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"DH3min"
-		""
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"DH3M"
-		""
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"DH4min"
-		""
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"DH4M"
-		""
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"DH5min"
-		""
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"DH5M"
-		""
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"DH6min"
-		""
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"DH6M"
-		""
+		"BLOCK_SIZE"
+		"5"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(drawing

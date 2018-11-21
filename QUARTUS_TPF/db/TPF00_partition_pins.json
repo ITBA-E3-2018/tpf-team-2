@@ -14,6 +14,14 @@
 				{
 					"name" : "g",
 					"strict" : false
+				},
+				{
+					"name" : "vsync",
+					"strict" : false
+				},
+				{
+					"name" : "hsync",
+					"strict" : false
 				}
 			]
 		}

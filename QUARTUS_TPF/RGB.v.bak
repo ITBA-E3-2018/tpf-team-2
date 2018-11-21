@@ -5,7 +5,6 @@ integer i;
 initial i=0;
 
 always @(posedge(clk)) begin
-
     if ((vdisplay==0)&&(hdisplay==0))begin
         r=rIn;
         g=gIn;
@@ -16,7 +15,6 @@ always @(posedge(clk)) begin
         g=0;
         b=0;
     end
-
 end
 
 endmodule

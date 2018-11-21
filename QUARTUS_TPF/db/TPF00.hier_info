@@ -4,6 +4,8 @@ inclk0 => pll:inst1.inclk0
 inclk0 => contador_final:inst3.NEclk
 b <= VGA:inst.b
 g <= VGA:inst.g
+vsync <= VGA:inst.vsync
+hsync <= VGA:inst.hsync
 Nres => ~NO_FANOUT~
 Enable => ~NO_FANOUT~
 
@@ -188,35 +190,88 @@ inclk[1] => pll1.CLK1
 
 
 |main|PosPant:inst2
-h_sinc => ~NO_FANOUT~
-v_sinc => ~NO_FANOUT~
-h1[0] => num[0].DATAA
-h1[1] => num[1].DATAA
-h1[2] => num[2].DATAA
-h1[3] => num[3].DATAA
-h0[0] => num[0].DATAB
-h0[1] => num[1].DATAB
-h0[2] => num[2].DATAB
-h0[3] => num[3].DATAB
-m1[0] => num[0].DATAB
-m1[1] => num[1].DATAB
-m1[2] => num[2].DATAB
-m1[3] => num[3].DATAB
-m0[0] => num[0].DATAB
-m0[1] => num[1].DATAB
-m0[2] => num[2].DATAB
-m0[3] => num[3].DATAB
-s1[0] => num[0].DATAB
-s1[1] => num[1].DATAB
-s1[2] => num[2].DATAB
-s1[3] => num[3].DATAB
-s0[0] => num[0].DATAB
-s0[1] => num[1].DATAB
-s0[2] => num[2].DATAB
-s0[3] => num[3].DATAB
-Rout <= colorOut.DB_MAX_OUTPUT_PORT_TYPE
-Gout <= colorOut.DB_MAX_OUTPUT_PORT_TYPE
-Bout <= colorOut.DB_MAX_OUTPUT_PORT_TYPE
+h_sinc => countH.OUTPUTSELECT
+h_sinc => countH.OUTPUTSELECT
+h_sinc => countH.OUTPUTSELECT
+h_sinc => countH.OUTPUTSELECT
+h_sinc => countH.OUTPUTSELECT
+h_sinc => countH.OUTPUTSELECT
+h_sinc => countH.OUTPUTSELECT
+h_sinc => countH.OUTPUTSELECT
+h_sinc => countH.OUTPUTSELECT
+h_sinc => countH.OUTPUTSELECT
+h_sinc => countH.OUTPUTSELECT
+h_sinc => countV.OUTPUTSELECT
+h_sinc => countV.OUTPUTSELECT
+h_sinc => countV.OUTPUTSELECT
+h_sinc => countV.OUTPUTSELECT
+h_sinc => countV.OUTPUTSELECT
+h_sinc => countV.OUTPUTSELECT
+h_sinc => countV.OUTPUTSELECT
+h_sinc => countV.OUTPUTSELECT
+h_sinc => countV.OUTPUTSELECT
+h_sinc => countV.OUTPUTSELECT
+h_sinc => countV.OUTPUTSELECT
+v_sinc => countV.OUTPUTSELECT
+v_sinc => countV.OUTPUTSELECT
+v_sinc => countV.OUTPUTSELECT
+v_sinc => countV.OUTPUTSELECT
+v_sinc => countV.OUTPUTSELECT
+v_sinc => countV.OUTPUTSELECT
+v_sinc => countV.OUTPUTSELECT
+v_sinc => countV.OUTPUTSELECT
+v_sinc => countV.OUTPUTSELECT
+v_sinc => countV.OUTPUTSELECT
+v_sinc => countV.OUTPUTSELECT
+h1[0] => h1[0].IN1
+h1[1] => h1[1].IN1
+h1[2] => h1[2].IN1
+h1[3] => h1[3].IN1
+h0[0] => h0[0].IN1
+h0[1] => h0[1].IN1
+h0[2] => h0[2].IN1
+h0[3] => h0[3].IN1
+m1[0] => m1[0].IN1
+m1[1] => m1[1].IN1
+m1[2] => m1[2].IN1
+m1[3] => m1[3].IN1
+m0[0] => m0[0].IN1
+m0[1] => m0[1].IN1
+m0[2] => m0[2].IN1
+m0[3] => m0[3].IN1
+s1[0] => s1[0].IN1
+s1[1] => s1[1].IN1
+s1[2] => s1[2].IN1
+s1[3] => s1[3].IN1
+s0[0] => s0[0].IN1
+s0[1] => s0[1].IN1
+s0[2] => s0[2].IN1
+s0[3] => s0[3].IN1
+Rout <= digitOne.DB_MAX_OUTPUT_PORT_TYPE
+Gout <= digitOne.DB_MAX_OUTPUT_PORT_TYPE
+Bout <= digitOne.DB_MAX_OUTPUT_PORT_TYPE
+clk => posY[0].CLK
+clk => posY[1].CLK
+clk => posY[2].CLK
+clk => posY[3].CLK
+clk => posY[4].CLK
+clk => posY[5].CLK
+clk => posY[6].CLK
+clk => posY[7].CLK
+clk => posY[8].CLK
+clk => posY[9].CLK
+clk => posY[10].CLK
+clk => posX[0].CLK
+clk => posX[1].CLK
+clk => posX[2].CLK
+clk => posX[3].CLK
+clk => posX[4].CLK
+clk => posX[5].CLK
+clk => posX[6].CLK
+clk => posX[7].CLK
+clk => posX[8].CLK
+clk => posX[9].CLK
+clk => posX[10].CLK
 clk => countV[0].CLK
 clk => countV[1].CLK
 clk => countV[2].CLK
@@ -242,6 +297,76 @@ clk => countH[10].CLK
 
 
 |main|PosPant:inst2|NumTo7Seg:Disp
+num[0] => Decoder0.IN3
+num[1] => Decoder0.IN2
+num[2] => Decoder0.IN1
+num[3] => Decoder0.IN0
+out[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|PosPant:inst2|NumTo7Seg:Disp2
+num[0] => Decoder0.IN3
+num[1] => Decoder0.IN2
+num[2] => Decoder0.IN1
+num[3] => Decoder0.IN0
+out[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|PosPant:inst2|NumTo7Seg:Disp3
+num[0] => Decoder0.IN3
+num[1] => Decoder0.IN2
+num[2] => Decoder0.IN1
+num[3] => Decoder0.IN0
+out[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|PosPant:inst2|NumTo7Seg:Disp4
+num[0] => Decoder0.IN3
+num[1] => Decoder0.IN2
+num[2] => Decoder0.IN1
+num[3] => Decoder0.IN0
+out[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|PosPant:inst2|NumTo7Seg:Disp5
+num[0] => Decoder0.IN3
+num[1] => Decoder0.IN2
+num[2] => Decoder0.IN1
+num[3] => Decoder0.IN0
+out[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|PosPant:inst2|NumTo7Seg:Disp6
 num[0] => Decoder0.IN3
 num[1] => Decoder0.IN2
 num[2] => Decoder0.IN1
