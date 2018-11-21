@@ -22,6 +22,10 @@
 				{
 					"name" : "hsync",
 					"strict" : false
+				},
+				{
+					"name" : "inclk0",
+					"strict" : false
 				}
 			]
 		}

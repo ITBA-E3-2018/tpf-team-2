@@ -16,7 +16,7 @@ always @(posedge(clk)) begin
         g=0;
         b=0;
     end
-
+	
 end
 
 endmodule

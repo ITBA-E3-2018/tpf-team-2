@@ -31,13 +31,6 @@ refer to the applicable agreement for further details.
 		(line (pt 0 32)(pt 16 32)(line_width 3))
 	)
 	(port
-		(pt 0 48)
-		(input)
-		(text "nreset" (rect 0 0 24 12)(font "Arial" ))
-		(text "nreset" (rect 21 43 45 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48)(line_width 1))
-	)
-	(port
 		(pt 200 32)
 		(output)
 		(text "ms[9..0]" (rect 0 0 33 12)(font "Arial" ))

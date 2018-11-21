@@ -4,7 +4,7 @@
 
 module contador_final (
     NEclk,                              // Negative-edge clock
-    Nreset,                             // Not-reset
+    reset,                              // Reset
     Enable,                             // Counting Enabler
     bcd_h_1, bcd_h_0,                   // Hours Passed Output
     bcd_min_1, bcd_min_0,               // Minutes Passed Output
@@ -15,7 +15,7 @@ module contador_final (
 parameter size = 29;
 
 // Defining I/O
-input NEclk, Nreset, Enable;
+input NEclk, reset, Enable;
 
 output [3:0] bcd_h_0, bcd_h_1;
 output [3:0] bcd_min_0, bcd_min_1;
@@ -23,7 +23,7 @@ output [3:0] bcd_s_0, bcd_s_1;
 output [3:0] bcd_ms_0, bcd_ms_1, bcd_ms_2;
 
 // Defining Data Types
-wire NEclk, Nreset, Enable;
+wire NEclk, reset, Enable, clkout;
 
 wire [3:0] bcd_h_0, bcd_h_1;
 wire [3:0] bcd_min_0, bcd_min_1;
@@ -39,18 +39,20 @@ wire [5:0] s;
 wire [5:0] min;
 wire [6:0] hr;                          // Binary Data to BCD Data
 
+reg [5:0] test_s;
+reg[size-1 : 0] test_count = 36700;
+
 // Code
 
 contadorN #(.BITS(size)) counter (
-    .NEclk(NEclk),
-    .Nreset(Nreset),
+    .NEclk(clkout),
+    .reset(reset),
     .Enable(Enable),
     .count(count)
-);
+); // Ver si anda este
 
 count2watch #(.BITS(size)) watch_data (
     .count(count),
-    .nreset(Nreset),
     .ms(ms),
     .s(s),
     .min(min),
@@ -65,4 +67,10 @@ bin2bcd converter (
     .bcd_ms_0(bcd_ms_0), .bcd_ms_1(bcd_ms_1), .bcd_ms_2(bcd_ms_2)
 );
 
+clock_50M_to_1k clock_1k (NEclk,clkout);
+
 endmodule
+
+
+
+

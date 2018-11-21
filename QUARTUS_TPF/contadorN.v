@@ -1,6 +1,6 @@
 module contadorN(
     NEclk,      // Negative-edge clock
-    Nreset,     // Not-reset
+    reset,     // Not-reset
     Enable,     // Counting Enabler
     count       // Count output
 );
@@ -8,28 +8,32 @@ module contadorN(
 parameter BITS = 29; // Parámetro para el tamaño del contador
 
 // Defining I/O
-input NEclk, Nreset, Enable;
+input NEclk, reset, Enable;
 
-output [BITS-1 : 0] count;
+output reg [BITS-1 : 0] count;
 
 // Defining Data Types
-wire NEclk, Nreset, Enable;
+wire NEclk, reset, Enable;
 
-reg [BITS-1 : 0] count;
+//reg [BITS-1 : 0] count;
+
+initial count=0;
 
 // Code
-always @ (negedge NEclk or negedge Nreset) begin
-    if(Nreset == 1'b0) begin
+
+always @ (negedge NEclk or negedge reset) begin
+    if(reset == 1'b1) begin
         count <= 0;
     end
     else begin
         if (Enable == 1'b1) begin
-            count <= #1 count + 1;
+            count <= count + 1;
         end 
-		  else begin
-            count <= #1 count;
-        end
     end
 end
 
+/*
+always @ (negedge NEclk) begin
+    count <= count + 1;
+end*/
 endmodule

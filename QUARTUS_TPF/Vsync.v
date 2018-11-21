@@ -1,10 +1,12 @@
-module Vsync (clk, vDisplay, vsync);
+module Vsync (clk, vDisplay, vsync,vj);
 input clk;
 output reg vDisplay, vsync;
 parameter V_SYNCPULSE=2, V_BPORCH=33, V_DISPLAY=480, V_FPORCH=10, V_SYNC=525;
 parameter H_SYNC=800;
 integer i;
+output reg [20:0] vj;
 initial i=0;
+initial vj=0;
 
 always @(posedge(clk)) begin
 //Determination of vsync signal
@@ -18,9 +20,11 @@ always @(posedge(clk)) begin
         //////
         if((i>((V_SYNCPULSE+V_BPORCH)*H_SYNC))&&(i<((V_SYNCPULSE+V_BPORCH+V_DISPLAY)*H_SYNC)))begin
             vDisplay=0; //significa que estoy en zona display
+				vj=vj+1;
         end
         else begin
             vDisplay=1;     //significa que no estoy en zona display
+				vj=0;
         end
         //////
         i=i+1;
@@ -30,6 +34,7 @@ always @(posedge(clk)) begin
         vsync=0;
         vDisplay=1;  
         i=0;
+		  //vj=0;
     end
 end
 

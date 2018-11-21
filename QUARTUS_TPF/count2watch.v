@@ -1,6 +1,5 @@
 module count2watch(
     count,      // Number of pulses counted
-    nreset,     // Resetting the output to 000
     ms,         // Output in ms
     s,          // Output in s
     min,        // Output in min
@@ -11,7 +10,6 @@ parameter BITS = 4;
 
 // Defining I/O
 input [BITS-1 : 0] count;
-input nreset;
 
 output [9:0] ms;
 output [5:0] s;
