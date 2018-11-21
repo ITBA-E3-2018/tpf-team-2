@@ -25,7 +25,7 @@ always @(posedge(clk)) begin
         i=i+1;
     end
     else if (i==(H_SYNC-1)) begin
-    $display ("chau");
+    //$display ("chau");
         hsync=0;
         hDisplay=1;  
         i=0;

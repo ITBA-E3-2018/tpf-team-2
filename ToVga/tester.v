@@ -9,7 +9,7 @@ Hsync myhsync (clk,hDisplay,hsync);
 RGB myrgb (clk,vDisplay,hDisplay,rIn,gIn,bIn,r,g,b);
 
 initial begin
-  #122880000000000;
+  #3000000;
   $finish;
 end
 

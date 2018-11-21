@@ -200,9 +200,9 @@
 
 endmodule*/
 
-module PosPant(h_sinc,v_sinc,h1,h0,m1,m0,s1,s0,Rout,Gout,Bout,clk);
+module PosPant(h_Disp,v_Disp,h1,h0,m1,m0,s1,s0,Rout,Gout,Bout,clk);
 
-	input h_sinc,v_sinc,clk;
+	input h_Disp,v_Disp,clk;
    input [3:0] h1;
    input [3:0] h0;
    input [3:0] m1;
@@ -211,11 +211,11 @@ module PosPant(h_sinc,v_sinc,h1,h0,m1,m0,s1,s0,Rout,Gout,Bout,clk);
    input [3:0] s0;
    output reg Rout,Gout,Bout;
    reg colorOut;
-   reg[10:0] posX;
-   reg[10:0]posY;
-   wire[10:0]posX1;
-   wire[10:0] posY1;
-   reg[3:0] num;
+   integer posX;
+   integer posY;
+   integer posX1;
+   integer posY1;
+   //reg[3:0] num;
    wire[6:0] disp1;
 	wire[6:0] disp2;
 	wire[6:0] disp3;
@@ -224,8 +224,9 @@ module PosPant(h_sinc,v_sinc,h1,h0,m1,m0,s1,s0,Rout,Gout,Bout,clk);
 	wire[6:0] disp6;
    reg [10:0] countV;
    reg [10:0] countH;
+	integer num;
 	
-	reg [6:0] digitOne,digitTwo,digitThree,digitFour,digitFive,digitSix;
+	//reg [6:0] digitOne,digitTwo,digitThree,digitFour,digitFive,digitSix;
 	
 	NumTo7Seg Disp(h1,disp1);
 	NumTo7Seg Disp2(h0,disp2);
@@ -235,53 +236,33 @@ module PosPant(h_sinc,v_sinc,h1,h0,m1,m0,s1,s0,Rout,Gout,Bout,clk);
 	NumTo7Seg Disp6(s0,disp6);
 	
 	parameter OFFSETNUM = 20, OFFSET_INIT_X = 400, OFFSET_INIT_Y=217, BLOCK_SIZE = 5;
-
-			
 	
-	always @(posedge clk) begin
-			if(h_sinc == 1) begin
-				countH = 0;
-				countV = countV+1;
-			end
-			
-			if(v_sinc == 1) begin
-				countV =0;
-			end
-        countH = countH+1;
-		  if((countH <= 48) || (countH >= 688)) begin
+	always @(posedge clk or posedge h_Disp or posedge v_Disp) begin
+        if(h_Disp == 1) begin
 				posX = 0;
-		  end
-		  else begin
-				posX = posX+1;
-		  end
-		  if(countV >= 33 && countV <= 513) begin
 				posY = posY+1;
-		  end
-		  else begin
+			end
+			if(v_Disp == 1)
 				posY = 0;
-		  end
+			if(clk)
+				posX = posX+1;
     end
 	 
 	 always  @(*) begin
-			if((posX >= (OFFSET_INIT_X+BLOCK_SIZE*1+OFFSETNUM*0)) && (posX <= (OFFSET_INIT_X+BLOCK_SIZE*4+OFFSETNUM*0)) && (posY >= OFFSET_INIT_Y+BLOCK_SIZE*0) && (posY <= OFFSET_INIT_Y+BLOCK_SIZE*1))
-					digitOne[6] = disp1[6];
-			else 
-					digitOne[6] = 0;
-					
-					
-			//if((posX >= (OFFSET_INIT_X+BLOCK_SIZE*4+OFFSETNUM*0)) && (posX <= (OFFSET_INIT_X+BLOCK_SIZE*5+OFFSETNUM*0)) && (posY >= OFFSET_INIT_Y+BLOCK_SIZE*1) && (posY <= OFFSET_INIT_Y+BLOCK_SIZE*4))
-			//		digitOne[5] = disp1[5];
-			//else 
-			//		digitOne[5]=0;
-			Rout = (digitOne[6]); //| digitOne[5]);
-	 
-	 
-	 
-	 
-	 
-	 
-			Gout = Rout;
-			Bout = Rout;
+			num = 0;
+            colorOut = 0;
+
+            //Primer digito
+			if((posX >= (OFFSET_INIT_X+BLOCK_SIZE*1+OFFSETNUM*num)) && 
+            (posX <= (OFFSET_INIT_X+BLOCK_SIZE*4+OFFSETNUM*num)) && 
+            (posY >= OFFSET_INIT_Y+BLOCK_SIZE*0) && (posY <= OFFSET_INIT_Y+BLOCK_SIZE*1) && 
+            (disp1[6]==1))
+				colorOut = 1;
+            
+
+			Rout = colorOut;
+			Gout = colorOut;
+			Bout = colorOut;
 			
 	 end
 	 
