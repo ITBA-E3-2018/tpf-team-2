@@ -13,7 +13,7 @@ input NEclk, reset, Enable;
 output reg [BITS-1 : 0] count;
 
 // Defining Data Types
-wire NEclk, reset, Enable;
+//wire NEclk, reset, Enable;
 
 //reg [BITS-1 : 0] count;
 
@@ -21,14 +21,14 @@ initial count=0;
 
 // Code
 
-always @ (negedge NEclk or negedge reset) begin
-    if(reset == 1'b1) begin
-        count <= 0;
+always @ (negedge NEclk) begin
+    if(reset == 1) begin
+        count = 0;
     end
     else begin
-        if (Enable == 1'b1) begin
-            count <= count + 1;
-        end 
+        if (Enable == 0) begin
+				count = count + 1;
+			end
     end
 end
 

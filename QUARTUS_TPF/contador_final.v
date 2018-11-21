@@ -23,7 +23,8 @@ output [3:0] bcd_s_0, bcd_s_1;
 output [3:0] bcd_ms_0, bcd_ms_1, bcd_ms_2;
 
 // Defining Data Types
-wire NEclk, reset, Enable, clkout;
+//wire NEclk, reset, Enable,
+wire clkout;
 
 wire [3:0] bcd_h_0, bcd_h_1;
 wire [3:0] bcd_min_0, bcd_min_1;
@@ -39,8 +40,9 @@ wire [5:0] s;
 wire [5:0] min;
 wire [6:0] hr;                          // Binary Data to BCD Data
 
-reg [5:0] test_s;
-reg[size-1 : 0] test_count = 36700;
+//reg [5:0] test_s;
+//reg[size-1 : 0] test_count = 36700;
+//reg test_Enable=1;
 
 // Code
 
