@@ -128,7 +128,7 @@ refer to the applicable agreement for further details.
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
 		"OFFSET_INIT_X"
-		"400"
+		"200"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
