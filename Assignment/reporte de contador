@@ -1,0 +1,35 @@
+To measure times down to the millisecond, a counter module was employed.
+
+Design:
+    Since the counter is designed to count time units, a clock input was needed. Also,
+    since the main functions on a stopwatch are START/STOP and RESET, the "Enable" and "Reset"
+    inputs were also taken into account in the design. Finally, to properly communicate with
+    the modules for displaying the time, the module was designed to output each digit in BCD format.
+
+    Given that the format chosen was HH:mm:ss, 6 BCD output in total were required. In addition,
+    for future implementation, the millisecond digits were also taken into account.
+
+Since the tasks at hand were to:
+    a) Count the number of milliseconds passed
+    b) Calculate the corresponding number of hours, minutes and seconds passed
+    c) Convert each quantity to BCD numbers
+    d) Scale down the clock frequency
+
+The module was designed with 3 sub-modules: a "counter" module, a "watch format" module, a
+"binary to BCD" module and a "frequency divider" module.
+
+How it works:
+
+    First, the frequency divider module converts the FPGA's 50 MHz to the required 1 kHz for the counter
+    module to actually count milliseconds.
+    Second, the counter module, as per the name, counts the number of milliseconds that pass. Since this count
+    needs to reach 100 hours maximum, the size of this counter is given by log_2(100*60*60*1000) = 29 bits.
+    Third, the "watch format" module converts the number of millisecons to its respective units: ms to hr, ms to min,
+    and ms to s, taking into account the format in which the data will be presented.
+    Finally, to send this data to the display modules, each quantity is converted into its respective BCD digits.
+    For example, if the "watch format" module returns 59s, the "binary to BCD" module will convert it into
+    a 5 and a 9, each in BCD format.
+
+    The RESET and ENABLE inputs only interact with the counter module. The RESET signal will clear the counter
+    and set it back to 0. The ENABLE signal activates or deactivates the counter. In other words, if it is low,
+    the count will not increase.
