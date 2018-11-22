@@ -364,6 +364,62 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Images/Sim1.png
+	lyxscale 50
+	scale 30
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename Images/Sim2.png
+	lyxscale 50
+	scale 30
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename Images/Sim3.png
+	lyxscale 50
+	scale 30
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename Images/Sim4.png
+	lyxscale 50
+	scale 30
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename Images/Sim5.png
+	lyxscale 50
+	scale 30
+
+\end_inset
+
 
 \end_layout
 

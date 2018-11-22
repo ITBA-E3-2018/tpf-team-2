@@ -2,7 +2,7 @@
 %% Do not edit unless you really know what you are doing.
 \documentclass[english]{article}
 \usepackage[T1]{fontenc}
-\usepackage[latin9]{luainputenc}
+\usepackage[latin9]{inputenc}
 \usepackage{geometry}
 \geometry{verbose,tmargin=2cm,bmargin=2cm,lmargin=2cm,rmargin=2cm,headheight=2cm,headsep=2cm}
 \setlength{\parindent}{0bp}
@@ -56,7 +56,7 @@ Column=\frac{T_{H}}{640}*(time\,v_{sync}\,is\,on)\label{eq:2}
 
 \begin{figure}[H]
 \begin{centering}
-\includegraphics[scale=0.5]{\string"Images/VGA pins\string".png} 
+\includegraphics[scale=0.5]{\string"Images/VGA pins\string".eps} 
 \par\end{centering}
 \caption{VGA Pins}
 \label{1}
@@ -70,6 +70,9 @@ Positioning Module, a Time Counter Module, a Timer Module and a binary
 to a 7 segments display module.
 
 \begin{figure}[H]
+\begin{centering}
+\includegraphics[scale=0.4]{Images/Modulos}
+\par\end{centering}
 \caption{Implementation Diagram}
 \label{2}
 \end{figure}
@@ -180,10 +183,10 @@ made in GTK wave before uploading to the FPGA, and as we see on Figure
 
 \begin{figure}[H]
 \noindent \begin{centering}
-\includegraphics[scale=0.4]{\string"Images/Simulacion 1\string".png}
+\includegraphics[scale=0.4]{\string"Images/Simulacion 1\string".eps}
 \par\end{centering}
 \noindent \begin{centering}
-\includegraphics[scale=0.4]{\string"Images/Simulacion 2\string".png}
+\includegraphics[scale=0.4]{\string"Images/Simulacion 2\string".eps}
 \par\end{centering}
 \caption{Simulation GTK Wave}
 \label{3}
