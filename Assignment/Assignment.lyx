@@ -1,16 +1,19 @@
-#LyX 2.3 created this file. For more info see http://www.lyx.org/
-\lyxformat 544
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
 \begin_document
 \begin_header
 \save_transient_properties true
 \origin unavailable
 \textclass article
-\use_default_options true
+\begin_preamble
+\usepackage{babel}
+\end_preamble
+\use_default_options false
 \maintain_unincluded_children false
 \language english
 \language_package default
-\inputencoding auto
-\fontencoding global
+\inputencoding iso8859-15
+\fontencoding T1
 \font_roman "default" "default"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
@@ -21,8 +24,6 @@
 \font_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
-\use_microtype false
-\use_dash_ligatures true
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -35,15 +36,15 @@
 \papersize default
 \use_geometry true
 \use_package amsmath 1
-\use_package amssymb 1
-\use_package cancel 1
+\use_package amssymb 0
+\use_package cancel 0
 \use_package esint 1
-\use_package mathdots 1
-\use_package mathtools 1
-\use_package mhchem 1
-\use_package stackrel 1
-\use_package stmaryrd 1
-\use_package undertilde 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
 \cite_engine basic
 \cite_engine_type default
 \biblio_style plain
@@ -52,8 +53,7 @@
 \paperorientation portrait
 \suppress_date false
 \justification true
-\use_refstyle 1
-\use_minted 0
+\use_refstyle 0
 \index Index
 \shortcut idx
 \color #008000
@@ -68,10 +68,7 @@
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation 0bp
-\is_math_indent 0
-\math_numbering_side default
-\quotes_style english
-\dynamic_quotes 0
+\quotes_language english
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -93,15 +90,15 @@ Müller, Malena
 \begin_inset Newline newline
 \end_inset
 
-Diaz, Ian Cruz
+ Diaz, Ian Cruz
 \begin_inset Newline newline
 \end_inset
 
-Oh, Victor
+ Oh, Victor
 \begin_inset Newline newline
 \end_inset
 
-Lin, Benjamin
+ Lin, Benjamin
 \end_layout
 
 \begin_layout Section
@@ -172,6 +169,7 @@ Column=\frac{T_{H}}{640}*(time\,v_{sync}\,is\,on)\label{eq:2}
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -184,7 +182,7 @@ status open
 
 \end_inset
 
-
+ 
 \end_layout
 
 \begin_layout Plain Layout
@@ -203,10 +201,6 @@ name "1"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -234,13 +228,10 @@ reference "2"
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
-
-\begin_layout Plain Layout
-
-\end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -258,10 +249,6 @@ name "2"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -292,24 +279,23 @@ reference "1"
  It outputs the following signals:
 \end_layout
 
-\begin_layout Standard
+\begin_layout Description
 -Vsync: The vertical synchronization's signal.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Description
 -Hsync: The horizontal synchronization's signal.
- 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Description
 -R: The signal corresponding to the red component of a pixel.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Description
 -G: The signal corresponding to the green component of a pixel.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Description
 -B: The signal corresponding to the blue component of a pixel.
 \end_layout
 
@@ -345,7 +331,7 @@ Four Verilog modules were made to generate these signals.
  which includes the previously mentioned three modules.
 \end_layout
 
-\begin_layout Subsubsection*
+\begin_layout Subsubsection
 Vsync Module
 \end_layout
 
@@ -355,7 +341,7 @@ This module generates and it outputs the entire Vsync signal, and it also
  in the corresponding vertical position.
 \end_layout
 
-\begin_layout Subsubsection*
+\begin_layout Subsubsection
 Hsync Module
 \end_layout
 
@@ -369,7 +355,6 @@ This module generates and it outputs the entire Hsync signal, and it also
 The vertical display and the horizontal display signals are not sent to
  the VGA pins, but they are used by the Screen Positioning Module, in order
  to know when to update the pixels' colors.
- 
 \end_layout
 
 \begin_layout Standard
@@ -382,10 +367,9 @@ In above's image it can be seen the functioning of the previously mentioned
  The vertical display and the horizontal display signals are not sent to
  the VGA pins, but they are used by the Screen Positioning Module, in order
  to know when to update the pixels' colors.
- 
 \end_layout
 
-\begin_layout Subsubsection*
+\begin_layout Subsubsection
 RGB Module
 \end_layout
 
@@ -438,6 +422,69 @@ reference "eq:2"
 \begin_layout Standard
 Finally, it feedbacks the H-sync and V_sync Generator module with the colors
  processed in this module.
+ A simulation of this module was made in GTK wave before uploading to the
+ FPGA, and as we see on Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "3"
+
+\end_inset
+
+, we can conclude that it behaves as expected to.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename Images/Simulacion 1.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename Images/Simulacion 2.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Simulation GTK Wave
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "3"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -455,7 +502,7 @@ Design:
 \begin_layout Standard
 Since the counter is designed to count time units, a clock input was needed.
  Also, since the main functions on a stopwatch are START/STOP and RESET,
- the "Enable" and "Reset" inputs were also taken into account in the design.
+ the " Enable" and " Reset" inputs were also taken into account in the design.
  Finally, to properly communicate with the modules for displaying the time,
  the module was designed to output each digit in BCD format.
 \end_layout
@@ -467,28 +514,29 @@ Given that the format chosen was HH:mm:ss, 6 BCD output in total were required.
 \end_layout
 
 \begin_layout Standard
-Since the tasks at hand were to:
+Since the tasks at hand were to: 
 \end_layout
 
 \begin_layout Itemize
-Count the number of milliseconds passed
+Count the number of milliseconds passed 
 \end_layout
 
 \begin_layout Itemize
 Calculate the corresponding number of hours, minutes and seconds passed
+ 
 \end_layout
 
 \begin_layout Itemize
-Convert each quantity to BCD numbers
+Convert each quantity to BCD numbers 
 \end_layout
 
 \begin_layout Itemize
-Scale down the clock frequency
+Scale down the clock frequency 
 \end_layout
 
 \begin_layout Standard
-The module was designed with 3 sub-modules: a "counter" module, a "watch
- format" module, a "binary to BCD" module and a "frequency divider" module.
+The module was designed with 3 sub-modules: a " counter" module, a " watch
+ format" module, a " binary to BCD" module and a " frequency divider" module.
 \end_layout
 
 \begin_layout Subsubsection
@@ -502,13 +550,13 @@ First, the frequency divider module converts the FPGA's 50 MHz to the required
  that pass.
  Since this count needs to reach 100 hours maximum, the size of this counter
  is 29 bits.
- Third, the "watch format" module converts the number of millisecons to
+ Third, the " watch format" module converts the number of millisecons to
  its respective units: ms to hr, ms to min, and ms to s, taking into account
  the format in which the data will be presented.
  Finally, to send this data to the display modules, each quantity is converted
  into its respective BCD digits.
- For example, if the "watch format" module returns 59s, the "binary to BCD"
- module will convert it into a 5 and a 9, each in BCD format.
+ For example, if the " watch format" module returns 59s, the " binary to
+ BCD" module will convert it into a 5 and a 9, each in BCD format.
 \end_layout
 
 \begin_layout Standard
@@ -516,10 +564,6 @@ The RESET and ENABLE inputs only interact with the counter module.
  The RESET signal will clear the counter and set it back to 0.
  The ENABLE signal activates or deactivates the counter.
  In other words, if it is low, the count will not increase.
-\end_layout
-
-\begin_layout Subsection
-Timer Module
 \end_layout
 
 \end_body

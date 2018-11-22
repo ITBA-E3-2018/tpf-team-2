@@ -1,20 +1,29 @@
-%% LyX 2.3.1-1 created this file.  For more info, see http://www.lyx.org/.
+%% LyX 2.2.3 created this file.  For more info, see http://www.lyx.org/.
 %% Do not edit unless you really know what you are doing.
 \documentclass[english]{article}
 \usepackage[T1]{fontenc}
-\usepackage[latin9]{inputenc}
+\usepackage[latin9]{luainputenc}
 \usepackage{geometry}
 \geometry{verbose,tmargin=2cm,bmargin=2cm,lmargin=2cm,rmargin=2cm,headheight=2cm,headsep=2cm}
 \setlength{\parindent}{0bp}
 \usepackage{float}
 \usepackage{graphicx}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage{babel}
+
+\makeatother
+
 \usepackage{babel}
 \begin{document}
+
 \title{Final Practical Work Electronics III}
+
 \author{Müller, Malena\\
-Diaz, Ian Cruz\\
-Oh, Victor\\
-Lin, Benjamin}
+ Diaz, Ian Cruz\\
+ Oh, Victor\\
+ Lin, Benjamin}
 \maketitle
 
 \section{Summary}
@@ -47,11 +56,10 @@ Column=\frac{T_{H}}{640}*(time\,v_{sync}\,is\,on)\label{eq:2}
 
 \begin{figure}[H]
 \begin{centering}
-\includegraphics[scale=0.5]{\string"Images/VGA pins\string".eps}
+\includegraphics[scale=0.5]{\string"Images/VGA pins\string".png} 
 \par\end{centering}
 \caption{VGA Pins}
 \label{1}
-
 \end{figure}
 
 \section{Implementation}
@@ -62,10 +70,8 @@ Positioning Module, a Time Counter Module, a Timer Module and a binary
 to a 7 segments display module.
 
 \begin{figure}[H]
-
 \caption{Implementation Diagram}
 \label{2}
-
 \end{figure}
 
 \subsection{VGA Module}
@@ -76,17 +82,13 @@ VGA connector, that we have to control: the V\_SYNC, H\_SYNC, R, G
 and B, shown in figure \ref{1}. We needed to send five signals, one
 to each of these five different monitor's pins. This signals' generator
 module was made in Verilog. It outputs the following signals:
-
--Vsync: The vertical synchronization's signal.
-
--Hsync: The horizontal synchronization's signal. 
-
--R: The signal corresponding to the red component of a pixel.
-
--G: The signal corresponding to the green component of a pixel.
-
--B: The signal corresponding to the blue component of a pixel.
-
+\begin{description}
+\item [{-Vsync:}] The vertical synchronization's signal.
+\item [{-Hsync:}] The horizontal synchronization's signal.
+\item [{-R:}] The signal corresponding to the red component of a pixel.
+\item [{-G:}] The signal corresponding to the green component of a pixel.
+\item [{-B:}] The signal corresponding to the blue component of a pixel.
+\end{description}
 We used a resolution of 640x480. The Vsync signal is responsible of
 updating the entire display, in each of its periods. In order to do
 so, the Hsync signal updates one horizontal line of the display in
@@ -111,13 +113,13 @@ Four Verilog modules were made to generate these signals. The Vsync
 module, Hsync module, RGB module, and finally the VGA module which
 includes the previously mentioned three modules.
 
-\subsubsection*{Vsync Module}
+\subsubsection{Vsync Module}
 
 This module generates and it outputs the entire Vsync signal, and
 it also outputs a vertical display sigal which is in 0 only when colors
 can appear in the corresponding vertical position.
 
-\subsubsection*{Hsync Module}
+\subsubsection{Hsync Module}
 
 This module generates and it outputs the entire Hsync signal, and
 it also outputs a horizontal display signal which is in 0 when colors
@@ -125,16 +127,16 @@ can appear in the corresponding horizontal position.
 
 The vertical display and the horizontal display signals are not sent
 to the VGA pins, but they are used by the Screen Positioning Module,
-in order to know when to update the pixels' colors. 
+in order to know when to update the pixels' colors.
 
 AGREGAR FOTO GTKWAVEEEEEEEEEEEEEEEEEEE
 
 In above's image it can be seen the functioning of the previously
 mentioned signals. The vertical display and the horizontal display
 signals are not sent to the VGA pins, but they are used by the Screen
-Positioning Module, in order to know when to update the pixels' colors. 
+Positioning Module, in order to know when to update the pixels' colors.
 
-\subsubsection*{RGB Module}
+\subsubsection{RGB Module}
 
 This module generates the R, G and B output signals.
 
@@ -161,7 +163,20 @@ display, and by knowing each pixel, it determines which pixel it has
 to print in white, and which in black.
 
 Finally, it feedbacks the H-sync and V\_sync Generator module with
-the colors processed in this module.
+the colors processed in this module. A simulation of this module was
+made in GTK wave before uploading to the FPGA, and as we see on Figure
+\ref{3}, we can conclude that it behaves as expected to.
+
+\begin{figure}[H]
+\noindent \begin{centering}
+\includegraphics[scale=0.4]{\string"Images/Simulacion 1\string".png}
+\par\end{centering}
+\noindent \begin{centering}
+\includegraphics[scale=0.4]{\string"Images/Simulacion 2\string".png}
+\par\end{centering}
+\caption{Simulation GTK Wave}
+\label{3}
+\end{figure}
 
 \subsection{Time Counter Module}
 
@@ -171,26 +186,26 @@ To measure times down to the millisecond, a counter module was employed.
 
 Since the counter is designed to count time units, a clock input was
 needed. Also, since the main functions on a stopwatch are START/STOP
-and RESET, the \textquotedbl Enable\textquotedbl{} and \textquotedbl Reset\textquotedbl{}
-inputs were also taken into account in the design. Finally, to properly
-communicate with the modules for displaying the time, the module was
-designed to output each digit in BCD format.
+and RESET, the \textquotedbl{} Enable\textquotedbl{} and \textquotedbl{}
+Reset\textquotedbl{} inputs were also taken into account in the design.
+Finally, to properly communicate with the modules for displaying the
+time, the module was designed to output each digit in BCD format.
 
 Given that the format chosen was HH:mm:ss, 6 BCD output in total were
 required. In addition, for future implementation, the millisecond
 digits were also taken into account.
 
-Since the tasks at hand were to:
+Since the tasks at hand were to: 
 \begin{itemize}
-\item Count the number of milliseconds passed
-\item Calculate the corresponding number of hours, minutes and seconds passed
-\item Convert each quantity to BCD numbers
-\item Scale down the clock frequency
+\item Count the number of milliseconds passed 
+\item Calculate the corresponding number of hours, minutes and seconds passed 
+\item Convert each quantity to BCD numbers 
+\item Scale down the clock frequency 
 \end{itemize}
-The module was designed with 3 sub-modules: a \textquotedbl counter\textquotedbl{}
-module, a \textquotedbl watch format\textquotedbl{} module, a \textquotedbl binary
-to BCD\textquotedbl{} module and a \textquotedbl frequency divider\textquotedbl{}
-module.
+The module was designed with 3 sub-modules: a \textquotedbl{} counter\textquotedbl{}
+module, a \textquotedbl{} watch format\textquotedbl{} module, a \textquotedbl{}
+binary to BCD\textquotedbl{} module and a \textquotedbl{} frequency
+divider\textquotedbl{} module.
 
 \subsubsection{How it works:}
 
@@ -198,20 +213,18 @@ First, the frequency divider module converts the FPGA's 50 MHz to
 the required 1 kHz for the counter module to actually count milliseconds.
 Second, the counter module, as per the name, counts the number of
 milliseconds that pass. Since this count needs to reach 100 hours
-maximum, the size of this counter is 29 bits. Third, the \textquotedbl watch
-format\textquotedbl{} module converts the number of millisecons to
-its respective units: ms to hr, ms to min, and ms to s, taking into
-account the format in which the data will be presented. Finally, to
-send this data to the display modules, each quantity is converted
-into its respective BCD digits. For example, if the \textquotedbl watch
-format\textquotedbl{} module returns 59s, the \textquotedbl binary
-to BCD\textquotedbl{} module will convert it into a 5 and a 9, each
-in BCD format.
+maximum, the size of this counter is 29 bits. Third, the \textquotedbl{}
+watch format\textquotedbl{} module converts the number of millisecons
+to its respective units: ms to hr, ms to min, and ms to s, taking
+into account the format in which the data will be presented. Finally,
+to send this data to the display modules, each quantity is converted
+into its respective BCD digits. For example, if the \textquotedbl{}
+watch format\textquotedbl{} module returns 59s, the \textquotedbl{}
+binary to BCD\textquotedbl{} module will convert it into a 5 and a
+9, each in BCD format.
 
 The RESET and ENABLE inputs only interact with the counter module.
 The RESET signal will clear the counter and set it back to 0. The
 ENABLE signal activates or deactivates the counter. In other words,
 if it is low, the count will not increase.
-
-\subsection{Timer Module}
 \end{document}
