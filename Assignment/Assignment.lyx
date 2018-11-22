@@ -265,7 +265,7 @@ VGA Module
 This module corresponds to the Video Graphics Array (VGA), which is a graphics
  standard for video display.
  There are five pins in the VGA connector, that we have to control: the
- V_SYNC, H_SYNC, R, G and B, shown in figure 
+ V_SYNC, H_SYNC, R, G and B, shown in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "1"
@@ -358,12 +358,108 @@ The vertical display and the horizontal display signals are not sent to
 \end_layout
 
 \begin_layout Standard
-AGREGAR FOTO GTKWAVEEEEEEEEEEEEEEEEEEE
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Images/Sim1.png
+	lyxscale 50
+	scale 30
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename Images/Sim2.png
+	lyxscale 50
+	scale 30
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename Images/Sim3.png
+	lyxscale 50
+	scale 30
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename Images/Sim4.png
+	lyxscale 50
+	scale 30
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename Images/Sim5.png
+	lyxscale 50
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+GTK Wave SImulations
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "4"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-In above's image it can be seen the functioning of the previously mentioned
- signals.
+In Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "4"
+
+\end_inset
+
+ we can see the functioning of the previously mentioned signals.
  The vertical display and the horizontal display signals are not sent to
  the VGA pins, but they are used by the Screen Positioning Module, in order
  to know when to update the pixels' colors.

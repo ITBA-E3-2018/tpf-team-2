@@ -265,7 +265,7 @@ VGA Module
 This module corresponds to the Video Graphics Array (VGA), which is a graphics
  standard for video display.
  There are five pins in the VGA connector, that we have to control: the
- V_SYNC, H_SYNC, R, G and B, shown in figure 
+ V_SYNC, H_SYNC, R, G and B, shown in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "1"
@@ -279,23 +279,23 @@ reference "1"
  It outputs the following signals:
 \end_layout
 
-\begin_layout Standard
+\begin_layout Description
 -Vsync: The vertical synchronization's signal.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Description
 -Hsync: The horizontal synchronization's signal.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Description
 -R: The signal corresponding to the red component of a pixel.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Description
 -G: The signal corresponding to the green component of a pixel.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Description
 -B: The signal corresponding to the blue component of a pixel.
 \end_layout
 
@@ -358,12 +358,52 @@ The vertical display and the horizontal display signals are not sent to
 \end_layout
 
 \begin_layout Standard
-AGREGAR FOTO GTKWAVEEEEEEEEEEEEEEEEEEE
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+GTK Wave SImulations
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "4"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-In above's image it can be seen the functioning of the previously mentioned
- signals.
+In Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "4"
+
+\end_inset
+
+ we can see the functioning of the previously mentioned signals.
  The vertical display and the horizontal display signals are not sent to
  the VGA pins, but they are used by the Screen Positioning Module, in order
  to know when to update the pixels' colors.
@@ -479,10 +519,6 @@ name "3"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
