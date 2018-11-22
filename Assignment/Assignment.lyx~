@@ -128,7 +128,10 @@ reference "1"
  Whatever the V_SYNC pin receives, corresponds to the vertical synchronization
  of the screen, while the H_SYNC pin receives what corresponds to its horizontal
  synchronization.
- The R, G and B wires correspond to the Red, Geen and Blue colors of the
+\end_layout
+
+\begin_layout Standard
+The R, G and B wires correspord to the Red, Geen and Blue colors of the
  pixel to print.
  So, if we call 
 \begin_inset Formula $T_{H}$
