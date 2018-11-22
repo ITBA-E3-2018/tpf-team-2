@@ -8,7 +8,7 @@ module PosPant(h_Disp,v_Disp,h1,h0,m1,m0,s1,s0,Rout,Gout,Bout,clk, posX, posY1);
    input [3:0] s1;
    input [3:0] s0;
    output reg Rout,Gout,Bout;
-   reg colorOut;
+   reg colorOut, colorOut2; //1 AGREGO COLOROUT2
    input[10:0]  posX;
    input [20:0] posY1;
    integer posX1;
@@ -36,6 +36,7 @@ module PosPant(h_Disp,v_Disp,h1,h0,m1,m0,s1,s0,Rout,Gout,Bout,clk, posX, posY1);
 			posY = posY1/640;
 			num = 0;
          colorOut = 0;
+			colorOut2=0; //4AGREGO ESTO
 
             //Primer digito
 			if((posX >= (OFFSET_INIT_X+BLOCK_SIZE*1+OFFSETNUM*num+BLOCK_SIZE*num*5)) && 
@@ -279,21 +280,29 @@ module PosPant(h_Disp,v_Disp,h1,h0,m1,m0,s1,s0,Rout,Gout,Bout,clk, posX, posY1);
 					 
 				if((posX >= (OFFSET_INIT_X+BLOCK_SIZE*12+OFFSETNUM*1)) && 
             (posX <= (OFFSET_INIT_X+BLOCK_SIZE*13+OFFSETNUM*1)) && 
-            (posY >= OFFSET_INIT_Y+BLOCK_SIZE*2) && (posY <= OFFSET_INIT_Y+BLOCK_SIZE*4))
+            (posY >= OFFSET_INIT_Y+BLOCK_SIZE*2) && (posY <= OFFSET_INIT_Y+BLOCK_SIZE*4))begin
                 colorOut = 1;
+					 colorOut2 = 1; //2 agrego esta linea
+					 end
 				if((posX >= (OFFSET_INIT_X+BLOCK_SIZE*12+OFFSETNUM*1)) && 
             (posX <= (OFFSET_INIT_X+BLOCK_SIZE*13+OFFSETNUM*1)) && 
-            (posY >= OFFSET_INIT_Y+BLOCK_SIZE*5) && (posY <= OFFSET_INIT_Y+BLOCK_SIZE*7))
+            (posY >= OFFSET_INIT_Y+BLOCK_SIZE*5) && (posY <= OFFSET_INIT_Y+BLOCK_SIZE*7))begin
                 colorOut = 1;
+					 colorOut2 = 1; //2 agrego esta linea
+					 end
 					 
 				if((posX >= (OFFSET_INIT_X+BLOCK_SIZE*30+OFFSETNUM*1)) && 
             (posX <= (OFFSET_INIT_X+BLOCK_SIZE*31+OFFSETNUM*1)) && 
-            (posY >= OFFSET_INIT_Y+BLOCK_SIZE*2) && (posY <= OFFSET_INIT_Y+BLOCK_SIZE*4))
+            (posY >= OFFSET_INIT_Y+BLOCK_SIZE*2) && (posY <= OFFSET_INIT_Y+BLOCK_SIZE*4))begin
                 colorOut = 1;
+					 colorOut2 = 1; //2 agrego esta linea
+					 end
 				if((posX >= (OFFSET_INIT_X+BLOCK_SIZE*30+OFFSETNUM*1)) && 
             (posX <= (OFFSET_INIT_X+BLOCK_SIZE*31+OFFSETNUM*1)) && 
-            (posY >= OFFSET_INIT_Y+BLOCK_SIZE*5) && (posY <= OFFSET_INIT_Y+BLOCK_SIZE*7))
+            (posY >= OFFSET_INIT_Y+BLOCK_SIZE*5) && (posY <= OFFSET_INIT_Y+BLOCK_SIZE*7))begin
                 colorOut = 1;
+					 colorOut2 = 1; //2 agrego esta linea
+					 end
 					 
 				
 					 
@@ -301,11 +310,17 @@ module PosPant(h_Disp,v_Disp,h1,h0,m1,m0,s1,s0,Rout,Gout,Bout,clk, posX, posY1);
 				Rout = colorOut;
 				Gout = colorOut;
 				Bout = 0;
+				if(colorOut2 == 1) begin // 3 agrego todo este if
+				Rout = 1;
+				Gout = 0;
+				Bout = 1;
+				colorOut2=0;
+				end
 			end
 			else begin
 				Rout = 0;
 				Gout = 0;
-				Bout = 1;
+				Bout = 1;//5 cambio por un cero
 			end
 
 			

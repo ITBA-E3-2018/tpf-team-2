@@ -1,5 +1,5 @@
 Analysis & Synthesis report for TPF00
-Wed Nov 21 21:00:12 2018
+Wed Nov 21 21:55:56 2018
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -75,13 +75,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Nov 21 21:00:12 2018       ;
+; Analysis & Synthesis Status        ; Successful - Wed Nov 21 21:55:55 2018       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; TPF00                                       ;
 ; Top-level Entity Name              ; main                                        ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 2,476                                       ;
-;     Total combinational functions  ; 2,475                                       ;
+; Total logic elements               ; 2,509                                       ;
+;     Total combinational functions  ; 2,509                                       ;
 ;     Dedicated logic registers      ; 148                                         ;
 ; Total registers                    ; 148                                         ;
 ; Total pins                         ; 8                                           ;
@@ -253,16 +253,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                        ;
 +---------------------------------------------+------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 2,476                                                                        ;
+; Estimated Total logic elements              ; 2,509                                                                        ;
 ;                                             ;                                                                              ;
-; Total combinational functions               ; 2475                                                                         ;
+; Total combinational functions               ; 2509                                                                         ;
 ; Logic element usage by number of LUT inputs ;                                                                              ;
-;     -- 4 input functions                    ; 717                                                                          ;
+;     -- 4 input functions                    ; 752                                                                          ;
 ;     -- 3 input functions                    ; 562                                                                          ;
-;     -- <=2 input functions                  ; 1196                                                                         ;
+;     -- <=2 input functions                  ; 1195                                                                         ;
 ;                                             ;                                                                              ;
 ; Logic elements by mode                      ;                                                                              ;
-;     -- normal mode                          ; 1806                                                                         ;
+;     -- normal mode                          ; 1840                                                                         ;
 ;     -- arithmetic mode                      ; 669                                                                          ;
 ;                                             ;                                                                              ;
 ; Total registers                             ; 148                                                                          ;
@@ -278,8 +278,8 @@ refer to the applicable agreement for further details.
 ;                                             ;                                                                              ;
 ; Maximum fan-out node                        ; pll:inst1|altpll:altpll_component|pll_altpll:auto_generated|wire_pll1_clk[0] ;
 ; Maximum fan-out                             ; 104                                                                          ;
-; Total fan-out                               ; 7064                                                                         ;
-; Average fan-out                             ; 2.68                                                                         ;
+; Total fan-out                               ; 7206                                                                         ;
+; Average fan-out                             ; 2.69                                                                         ;
 +---------------------------------------------+------------------------------------------------------------------------------+
 
 
@@ -288,9 +288,9 @@ refer to the applicable agreement for further details.
 +----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                               ; Entity Name         ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |main                                        ; 2475 (0)            ; 148 (0)                   ; 0           ; 0            ; 0       ; 0         ; 8    ; 0            ; |main                                                                                                                                             ; main                ; work         ;
-;    |PosPant:inst2|                           ; 429 (131)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|PosPant:inst2                                                                                                                               ; PosPant             ; work         ;
-;       |NumTo7Seg:Disp2|                      ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|PosPant:inst2|NumTo7Seg:Disp2                                                                                                               ; NumTo7Seg           ; work         ;
+; |main                                        ; 2509 (0)            ; 148 (0)                   ; 0           ; 0            ; 0       ; 0         ; 8    ; 0            ; |main                                                                                                                                             ; main                ; work         ;
+;    |PosPant:inst2|                           ; 477 (142)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|PosPant:inst2                                                                                                                               ; PosPant             ; work         ;
+;       |NumTo7Seg:Disp2|                      ; 42 (42)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|PosPant:inst2|NumTo7Seg:Disp2                                                                                                               ; NumTo7Seg           ; work         ;
 ;       |NumTo7Seg:Disp4|                      ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|PosPant:inst2|NumTo7Seg:Disp4                                                                                                               ; NumTo7Seg           ; work         ;
 ;       |NumTo7Seg:Disp5|                      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|PosPant:inst2|NumTo7Seg:Disp5                                                                                                               ; NumTo7Seg           ; work         ;
 ;       |NumTo7Seg:Disp6|                      ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|PosPant:inst2|NumTo7Seg:Disp6                                                                                                               ; NumTo7Seg           ; work         ;
@@ -298,12 +298,12 @@ refer to the applicable agreement for further details.
 ;          |lpm_divide_bkm:auto_generated|     ; 282 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|PosPant:inst2|lpm_divide:Div0|lpm_divide_bkm:auto_generated                                                                                 ; lpm_divide_bkm      ; work         ;
 ;             |sign_div_unsign_3nh:divider|    ; 282 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|PosPant:inst2|lpm_divide:Div0|lpm_divide_bkm:auto_generated|sign_div_unsign_3nh:divider                                                     ; sign_div_unsign_3nh ; work         ;
 ;                |alt_u_div_q9f:divider|       ; 282 (282)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|PosPant:inst2|lpm_divide:Div0|lpm_divide_bkm:auto_generated|sign_div_unsign_3nh:divider|alt_u_div_q9f:divider                               ; alt_u_div_q9f       ; work         ;
-;    |VGA:inst|                                ; 246 (0)             ; 103 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|VGA:inst                                                                                                                                    ; VGA                 ; work         ;
-;       |Hsync:myhsync|                        ; 111 (111)           ; 45 (45)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|VGA:inst|Hsync:myhsync                                                                                                                      ; Hsync               ; work         ;
-;       |RGB:myRGB|                            ; 14 (14)             ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|VGA:inst|RGB:myRGB                                                                                                                          ; RGB                 ; work         ;
-;       |Vsync:myvsync|                        ; 121 (121)           ; 55 (55)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|VGA:inst|Vsync:myvsync                                                                                                                      ; Vsync               ; work         ;
-;    |contador_final:inst3|                    ; 1800 (0)            ; 45 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|contador_final:inst3                                                                                                                        ; contador_final      ; work         ;
-;       |bin2bcd:converter|                    ; 149 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|contador_final:inst3|bin2bcd:converter                                                                                                      ; bin2bcd             ; work         ;
+;    |VGA:inst|                                ; 239 (0)             ; 103 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|VGA:inst                                                                                                                                    ; VGA                 ; work         ;
+;       |Hsync:myhsync|                        ; 112 (112)           ; 45 (45)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|VGA:inst|Hsync:myhsync                                                                                                                      ; Hsync               ; work         ;
+;       |RGB:myRGB|                            ; 5 (5)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|VGA:inst|RGB:myRGB                                                                                                                          ; RGB                 ; work         ;
+;       |Vsync:myvsync|                        ; 122 (122)           ; 55 (55)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|VGA:inst|Vsync:myvsync                                                                                                                      ; Vsync               ; work         ;
+;    |contador_final:inst3|                    ; 1793 (0)            ; 45 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|contador_final:inst3                                                                                                                        ; contador_final      ; work         ;
+;       |bin2bcd:converter|                    ; 145 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|contador_final:inst3|bin2bcd:converter                                                                                                      ; bin2bcd             ; work         ;
 ;          |lpm_divide:Div0|                   ; 5 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|contador_final:inst3|bin2bcd:converter|lpm_divide:Div0                                                                                      ; lpm_divide          ; work         ;
 ;             |lpm_divide_ihm:auto_generated|  ; 5 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|contador_final:inst3|bin2bcd:converter|lpm_divide:Div0|lpm_divide_ihm:auto_generated                                                        ; lpm_divide_ihm      ; work         ;
 ;                |sign_div_unsign_akh:divider| ; 5 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|contador_final:inst3|bin2bcd:converter|lpm_divide:Div0|lpm_divide_ihm:auto_generated|sign_div_unsign_akh:divider                            ; sign_div_unsign_akh ; work         ;
@@ -316,10 +316,10 @@ refer to the applicable agreement for further details.
 ;             |lpm_divide_hhm:auto_generated|  ; 32 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|contador_final:inst3|bin2bcd:converter|lpm_divide:Div2|lpm_divide_hhm:auto_generated                                                        ; lpm_divide_hhm      ; work         ;
 ;                |sign_div_unsign_9kh:divider| ; 32 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|contador_final:inst3|bin2bcd:converter|lpm_divide:Div2|lpm_divide_hhm:auto_generated|sign_div_unsign_9kh:divider                            ; sign_div_unsign_9kh ; work         ;
 ;                   |alt_u_div_64f:divider|    ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|contador_final:inst3|bin2bcd:converter|lpm_divide:Div2|lpm_divide_hhm:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_64f:divider      ; alt_u_div_64f       ; work         ;
-;          |lpm_divide:Mod0|                   ; 10 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|contador_final:inst3|bin2bcd:converter|lpm_divide:Mod0                                                                                      ; lpm_divide          ; work         ;
-;             |lpm_divide_l9m:auto_generated|  ; 10 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|contador_final:inst3|bin2bcd:converter|lpm_divide:Mod0|lpm_divide_l9m:auto_generated                                                        ; lpm_divide_l9m      ; work         ;
-;                |sign_div_unsign_akh:divider| ; 10 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|contador_final:inst3|bin2bcd:converter|lpm_divide:Mod0|lpm_divide_l9m:auto_generated|sign_div_unsign_akh:divider                            ; sign_div_unsign_akh ; work         ;
-;                   |alt_u_div_84f:divider|    ; 10 (10)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|contador_final:inst3|bin2bcd:converter|lpm_divide:Mod0|lpm_divide_l9m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_84f:divider      ; alt_u_div_84f       ; work         ;
+;          |lpm_divide:Mod0|                   ; 6 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|contador_final:inst3|bin2bcd:converter|lpm_divide:Mod0                                                                                      ; lpm_divide          ; work         ;
+;             |lpm_divide_l9m:auto_generated|  ; 6 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|contador_final:inst3|bin2bcd:converter|lpm_divide:Mod0|lpm_divide_l9m:auto_generated                                                        ; lpm_divide_l9m      ; work         ;
+;                |sign_div_unsign_akh:divider| ; 6 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|contador_final:inst3|bin2bcd:converter|lpm_divide:Mod0|lpm_divide_l9m:auto_generated|sign_div_unsign_akh:divider                            ; sign_div_unsign_akh ; work         ;
+;                   |alt_u_div_84f:divider|    ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|contador_final:inst3|bin2bcd:converter|lpm_divide:Mod0|lpm_divide_l9m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_84f:divider      ; alt_u_div_84f       ; work         ;
 ;          |lpm_divide:Mod2|                   ; 37 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|contador_final:inst3|bin2bcd:converter|lpm_divide:Mod2                                                                                      ; lpm_divide          ; work         ;
 ;             |lpm_divide_k9m:auto_generated|  ; 37 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|contador_final:inst3|bin2bcd:converter|lpm_divide:Mod2|lpm_divide_k9m:auto_generated                                                        ; lpm_divide_k9m      ; work         ;
 ;                |sign_div_unsign_9kh:divider| ; 37 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|contador_final:inst3|bin2bcd:converter|lpm_divide:Mod2|lpm_divide_k9m:auto_generated|sign_div_unsign_9kh:divider                            ; sign_div_unsign_9kh ; work         ;
@@ -330,7 +330,7 @@ refer to the applicable agreement for further details.
 ;                   |alt_u_div_64f:divider|    ; 33 (33)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|contador_final:inst3|bin2bcd:converter|lpm_divide:Mod4|lpm_divide_k9m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_64f:divider      ; alt_u_div_64f       ; work         ;
 ;       |clock_50M_to_1k:clock_1k|             ; 27 (27)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|contador_final:inst3|clock_50M_to_1k:clock_1k                                                                                               ; clock_50M_to_1k     ; work         ;
 ;       |contadorN:counter|                    ; 29 (29)             ; 29 (29)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|contador_final:inst3|contadorN:counter                                                                                                      ; contadorN           ; work         ;
-;       |count2watch:watch_data|               ; 1595 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|contador_final:inst3|count2watch:watch_data                                                                                                 ; count2watch         ; work         ;
+;       |count2watch:watch_data|               ; 1592 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|contador_final:inst3|count2watch:watch_data                                                                                                 ; count2watch         ; work         ;
 ;          |lpm_divide:Div0|                   ; 540 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|contador_final:inst3|count2watch:watch_data|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
 ;             |lpm_divide_jkm:auto_generated|  ; 540 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|contador_final:inst3|count2watch:watch_data|lpm_divide:Div0|lpm_divide_jkm:auto_generated                                                   ; lpm_divide_jkm      ; work         ;
 ;                |sign_div_unsign_bnh:divider| ; 540 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|contador_final:inst3|count2watch:watch_data|lpm_divide:Div0|lpm_divide_jkm:auto_generated|sign_div_unsign_bnh:divider                       ; sign_div_unsign_bnh ; work         ;
@@ -343,10 +343,10 @@ refer to the applicable agreement for further details.
 ;             |lpm_divide_8jm:auto_generated|  ; 183 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|contador_final:inst3|count2watch:watch_data|lpm_divide:Div2|lpm_divide_8jm:auto_generated                                                   ; lpm_divide_8jm      ; work         ;
 ;                |sign_div_unsign_0mh:divider| ; 183 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|contador_final:inst3|count2watch:watch_data|lpm_divide:Div2|lpm_divide_8jm:auto_generated|sign_div_unsign_0mh:divider                       ; sign_div_unsign_0mh ; work         ;
 ;                   |alt_u_div_k7f:divider|    ; 183 (183)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|contador_final:inst3|count2watch:watch_data|lpm_divide:Div2|lpm_divide_8jm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider ; alt_u_div_k7f       ; work         ;
-;          |lpm_divide:Mod1|                   ; 294 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|contador_final:inst3|count2watch:watch_data|lpm_divide:Mod1                                                                                 ; lpm_divide          ; work         ;
-;             |lpm_divide_bbm:auto_generated|  ; 294 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|contador_final:inst3|count2watch:watch_data|lpm_divide:Mod1|lpm_divide_bbm:auto_generated                                                   ; lpm_divide_bbm      ; work         ;
-;                |sign_div_unsign_0mh:divider| ; 294 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|contador_final:inst3|count2watch:watch_data|lpm_divide:Mod1|lpm_divide_bbm:auto_generated|sign_div_unsign_0mh:divider                       ; sign_div_unsign_0mh ; work         ;
-;                   |alt_u_div_k7f:divider|    ; 294 (294)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|contador_final:inst3|count2watch:watch_data|lpm_divide:Mod1|lpm_divide_bbm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider ; alt_u_div_k7f       ; work         ;
+;          |lpm_divide:Mod1|                   ; 291 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|contador_final:inst3|count2watch:watch_data|lpm_divide:Mod1                                                                                 ; lpm_divide          ; work         ;
+;             |lpm_divide_bbm:auto_generated|  ; 291 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|contador_final:inst3|count2watch:watch_data|lpm_divide:Mod1|lpm_divide_bbm:auto_generated                                                   ; lpm_divide_bbm      ; work         ;
+;                |sign_div_unsign_0mh:divider| ; 291 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|contador_final:inst3|count2watch:watch_data|lpm_divide:Mod1|lpm_divide_bbm:auto_generated|sign_div_unsign_0mh:divider                       ; sign_div_unsign_0mh ; work         ;
+;                   |alt_u_div_k7f:divider|    ; 291 (291)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|contador_final:inst3|count2watch:watch_data|lpm_divide:Mod1|lpm_divide_bbm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider ; alt_u_div_k7f       ; work         ;
 ;          |lpm_divide:Mod2|                   ; 200 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|contador_final:inst3|count2watch:watch_data|lpm_divide:Mod2                                                                                 ; lpm_divide          ; work         ;
 ;             |lpm_divide_bbm:auto_generated|  ; 200 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|contador_final:inst3|count2watch:watch_data|lpm_divide:Mod2|lpm_divide_bbm:auto_generated                                                   ; lpm_divide_bbm      ; work         ;
 ;                |sign_div_unsign_0mh:divider| ; 200 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|contador_final:inst3|count2watch:watch_data|lpm_divide:Mod2|lpm_divide_bbm:auto_generated|sign_div_unsign_0mh:divider                       ; sign_div_unsign_0mh ; work         ;
@@ -381,20 +381,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 61    ;
+; Number of registers using Clock Enable       ; 65    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
-; 3:1                ; 34 bits   ; 68 LEs        ; 34 LEs               ; 34 LEs                 ; Yes        ; |main|VGA:inst|Vsync:myvsync|i[20] ;
-; 3:1                ; 34 bits   ; 68 LEs        ; 34 LEs               ; 34 LEs                 ; Yes        ; |main|VGA:inst|Hsync:myhsync|i[11] ;
-; 4:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |main|VGA:inst|Hsync:myhsync|hj[2] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
+; 3:1                ; 34 bits   ; 68 LEs        ; 34 LEs               ; 34 LEs                 ; Yes        ; |main|VGA:inst|Vsync:myvsync|vDisplay ;
+; 3:1                ; 34 bits   ; 68 LEs        ; 34 LEs               ; 34 LEs                 ; Yes        ; |main|VGA:inst|Hsync:myhsync|i[10]    ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |main|VGA:inst|RGB:myRGB|g            ;
+; 4:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |main|VGA:inst|Hsync:myhsync|hj[0]    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
 
 
 +---------------------------------------------------------------------+
@@ -1350,24 +1351,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; boundary_port         ; 8                           ;
 ; cycloneiii_ff         ; 148                         ;
-;     ENA               ; 40                          ;
+;     ENA               ; 44                          ;
 ;     ENA SCLR          ; 21                          ;
-;     plain             ; 87                          ;
-; cycloneiii_lcell_comb ; 2475                        ;
+;     plain             ; 83                          ;
+; cycloneiii_lcell_comb ; 2509                        ;
 ;     arith             ; 669                         ;
 ;         1 data inputs ; 7                           ;
 ;         2 data inputs ; 167                         ;
 ;         3 data inputs ; 495                         ;
-;     normal            ; 1806                        ;
+;     normal            ; 1840                        ;
 ;         0 data inputs ; 103                         ;
 ;         1 data inputs ; 62                          ;
-;         2 data inputs ; 857                         ;
+;         2 data inputs ; 856                         ;
 ;         3 data inputs ; 67                          ;
-;         4 data inputs ; 717                         ;
+;         4 data inputs ; 752                         ;
 ; cycloneiii_pll        ; 1                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 69.80                       ;
-; Average LUT depth     ; 51.89                       ;
+; Average LUT depth     ; 52.16                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1386,7 +1387,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Nov 21 20:59:42 2018
+    Info: Processing started: Wed Nov 21 21:55:26 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TPF00 -c TPF00
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -1635,6 +1636,31 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_
     Info (12023): Found entity 1: lpm_divide_k9m File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/lpm_divide_k9m.tdf Line: 24
 Info (286030): Timing-Driven Synthesis is running
 Info (17016): Found the following redundant logic cells in design
+    Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Div1|lpm_divide_8jm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_14_result_int[1]~12" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 56
+    Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Div1|lpm_divide_8jm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_14_result_int[0]~14" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 56
+    Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Div1|lpm_divide_8jm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_15_result_int[0]~14" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 61
+    Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Div1|lpm_divide_8jm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_16_result_int[0]~14" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 66
+    Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Div2|lpm_divide_8jm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_19_result_int[1]~12" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 81
+    Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Div1|lpm_divide_8jm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_17_result_int[0]~14" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 71
+    Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Div2|lpm_divide_8jm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_19_result_int[0]~14" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 81
+    Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Div1|lpm_divide_8jm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_18_result_int[0]~14" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 76
+    Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Div2|lpm_divide_8jm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_20_result_int[0]~14" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 91
+    Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Mod3|lpm_divide_9bm:auto_generated|sign_div_unsign_ulh:divider|alt_u_div_g7f:divider|add_sub_22_result_int[0]~10" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_g7f.tdf Line: 101
+    Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Div1|lpm_divide_8jm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_19_result_int[0]~14" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 81
+    Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Div2|lpm_divide_8jm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_21_result_int[0]~14" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 96
+    Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Mod3|lpm_divide_9bm:auto_generated|sign_div_unsign_ulh:divider|alt_u_div_g7f:divider|add_sub_23_result_int[0]~10" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_g7f.tdf Line: 106
+    Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Div1|lpm_divide_8jm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_20_result_int[0]~14" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 91
+    Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Div2|lpm_divide_8jm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_22_result_int[0]~14" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 101
+    Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Mod3|lpm_divide_9bm:auto_generated|sign_div_unsign_ulh:divider|alt_u_div_g7f:divider|add_sub_24_result_int[0]~10" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_g7f.tdf Line: 111
+    Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Div1|lpm_divide_8jm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_21_result_int[0]~14" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 96
+    Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Div2|lpm_divide_8jm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_23_result_int[0]~14" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 106
+    Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Mod3|lpm_divide_9bm:auto_generated|sign_div_unsign_ulh:divider|alt_u_div_g7f:divider|add_sub_25_result_int[0]~10" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_g7f.tdf Line: 116
+    Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Div1|lpm_divide_8jm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_22_result_int[0]~14" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 101
+    Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Div2|lpm_divide_8jm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_24_result_int[0]~14" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 111
+    Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Mod3|lpm_divide_9bm:auto_generated|sign_div_unsign_ulh:divider|alt_u_div_g7f:divider|add_sub_26_result_int[0]~10" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_g7f.tdf Line: 121
+    Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Div1|lpm_divide_8jm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_23_result_int[0]~14" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 106
+    Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Div2|lpm_divide_8jm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_25_result_int[0]~14" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 116
+    Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Mod3|lpm_divide_9bm:auto_generated|sign_div_unsign_ulh:divider|alt_u_div_g7f:divider|add_sub_27_result_int[0]~10" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_g7f.tdf Line: 126
     Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Mod1|lpm_divide_bbm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_14_result_int[1]~12" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 56
     Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Mod1|lpm_divide_bbm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_14_result_int[0]~14" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 56
     Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Mod1|lpm_divide_bbm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_15_result_int[0]~14" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 61
@@ -1647,45 +1673,20 @@ Info (17016): Found the following redundant logic cells in design
     Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Mod1|lpm_divide_bbm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_22_result_int[0]~14" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 101
     Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Mod1|lpm_divide_bbm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_23_result_int[0]~14" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 106
     Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Mod1|lpm_divide_bbm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_24_result_int[0]~14" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 111
-    Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Mod1|lpm_divide_bbm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_26_result_int[0]~14" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 121
-    Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Mod1|lpm_divide_bbm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_27_result_int[0]~14" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 126
-    Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Div1|lpm_divide_8jm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_14_result_int[1]~12" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 56
-    Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Div1|lpm_divide_8jm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_14_result_int[0]~14" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 56
-    Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Div1|lpm_divide_8jm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_15_result_int[0]~14" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 61
-    Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Div1|lpm_divide_8jm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_16_result_int[0]~14" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 66
+    Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Mod1|lpm_divide_bbm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_25_result_int[0]~14" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 116
+    Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Mod1|lpm_divide_bbm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_27_result_int[0]~12" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 126
     Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Mod2|lpm_divide_bbm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_19_result_int[1]~12" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 81
-    Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Div1|lpm_divide_8jm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_17_result_int[0]~14" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 71
     Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Mod2|lpm_divide_bbm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_19_result_int[0]~14" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 81
-    Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Div1|lpm_divide_8jm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_18_result_int[0]~14" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 76
     Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Mod2|lpm_divide_bbm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_20_result_int[0]~14" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 91
-    Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Div1|lpm_divide_8jm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_19_result_int[0]~14" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 81
     Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Mod2|lpm_divide_bbm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_21_result_int[0]~14" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 96
-    Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Div1|lpm_divide_8jm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_20_result_int[0]~14" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 91
     Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Mod2|lpm_divide_bbm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_22_result_int[0]~14" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 101
-    Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Div1|lpm_divide_8jm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_21_result_int[0]~14" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 96
     Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Mod2|lpm_divide_bbm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_23_result_int[0]~14" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 106
-    Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Div1|lpm_divide_8jm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_22_result_int[0]~14" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 101
     Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Mod2|lpm_divide_bbm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_24_result_int[0]~14" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 111
-    Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Div1|lpm_divide_8jm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_23_result_int[0]~14" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 106
     Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Mod2|lpm_divide_bbm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_25_result_int[0]~14" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 116
     Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Div1|lpm_divide_8jm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_24_result_int[0]~14" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 111
     Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Mod2|lpm_divide_bbm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_26_result_int[0]~14" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 121
     Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Div1|lpm_divide_8jm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_25_result_int[0]~14" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 116
     Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Mod2|lpm_divide_bbm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_27_result_int[0]~14" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 126
-    Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Div2|lpm_divide_8jm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_19_result_int[1]~12" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 81
-    Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Div2|lpm_divide_8jm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_19_result_int[0]~14" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 81
-    Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Div2|lpm_divide_8jm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_20_result_int[0]~14" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 91
-    Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Mod3|lpm_divide_9bm:auto_generated|sign_div_unsign_ulh:divider|alt_u_div_g7f:divider|add_sub_22_result_int[0]~10" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_g7f.tdf Line: 101
-    Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Div2|lpm_divide_8jm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_21_result_int[0]~14" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 96
-    Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Mod3|lpm_divide_9bm:auto_generated|sign_div_unsign_ulh:divider|alt_u_div_g7f:divider|add_sub_23_result_int[0]~10" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_g7f.tdf Line: 106
-    Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Div2|lpm_divide_8jm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_22_result_int[0]~14" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 101
-    Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Mod3|lpm_divide_9bm:auto_generated|sign_div_unsign_ulh:divider|alt_u_div_g7f:divider|add_sub_24_result_int[0]~10" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_g7f.tdf Line: 111
-    Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Div2|lpm_divide_8jm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_23_result_int[0]~14" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 106
-    Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Mod3|lpm_divide_9bm:auto_generated|sign_div_unsign_ulh:divider|alt_u_div_g7f:divider|add_sub_25_result_int[0]~10" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_g7f.tdf Line: 116
-    Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Div2|lpm_divide_8jm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_24_result_int[0]~14" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 111
-    Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Mod3|lpm_divide_9bm:auto_generated|sign_div_unsign_ulh:divider|alt_u_div_g7f:divider|add_sub_26_result_int[0]~10" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_g7f.tdf Line: 121
-    Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Div2|lpm_divide_8jm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_25_result_int[0]~14" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 116
-    Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Mod3|lpm_divide_9bm:auto_generated|sign_div_unsign_ulh:divider|alt_u_div_g7f:divider|add_sub_27_result_int[0]~10" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_g7f.tdf Line: 126
     Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Div2|lpm_divide_8jm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_26_result_int[0]~14" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 121
     Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Mod3|lpm_divide_9bm:auto_generated|sign_div_unsign_ulh:divider|alt_u_div_g7f:divider|add_sub_28_result_int[0]~10" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_g7f.tdf Line: 131
     Info (17048): Logic cell "contador_final:inst3|count2watch:watch_data|lpm_divide:Div1|lpm_divide_8jm:auto_generated|sign_div_unsign_0mh:divider|alt_u_div_k7f:divider|add_sub_26_result_int[0]~14" File: C:/Users/Male/Desktop/Electro3/TPF/tpf-team-2/QUARTUS_TPF/db/alt_u_div_k7f.tdf Line: 121
@@ -1696,16 +1697,16 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "Enable"
     Warning (15610): No output dependent on input pin "Nres"
-Info (21057): Implemented 2486 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2518 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 5 output pins
-    Info (21061): Implemented 2477 logic cells
+    Info (21061): Implemented 2509 logic cells
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 25 warnings
     Info: Peak virtual memory: 4810 megabytes
-    Info: Processing ended: Wed Nov 21 21:00:12 2018
+    Info: Processing ended: Wed Nov 21 21:55:56 2018
     Info: Elapsed time: 00:00:30
-    Info: Total CPU time (on all processors): 00:00:58
+    Info: Total CPU time (on all processors): 00:00:57
 
 
 +------------------------------------------+
