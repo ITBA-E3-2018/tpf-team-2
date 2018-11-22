@@ -79,7 +79,7 @@ to a 7 segments display module.
 This module corresponds to the Video Graphics Array (VGA), which is
 a graphics standard for video display. There are five pins in the
 VGA connector, that we have to control: the V\_SYNC, H\_SYNC, R, G
-and B, shown in figure \ref{1}. We needed to send five signals, one
+and B, shown in Figure \ref{1}. We needed to send five signals, one
 to each of these five different monitor's pins. This signals' generator
 module was made in Verilog. It outputs the following signals:
 \begin{description}
@@ -129,12 +129,23 @@ The vertical display and the horizontal display signals are not sent
 to the VGA pins, but they are used by the Screen Positioning Module,
 in order to know when to update the pixels' colors.
 
-AGREGAR FOTO GTKWAVEEEEEEEEEEEEEEEEEEE
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[scale=0.3]{Images/Sim1}\\
+\includegraphics[scale=0.3]{Images/Sim2}\\
+\includegraphics[scale=0.3]{Images/Sim3}\\
+\includegraphics[scale=0.3]{Images/Sim4}\\
+\includegraphics[scale=0.3]{Images/Sim5}
+\par\end{centering}
+\caption{GTK Wave SImulations}
+\label{4}
 
-In above's image it can be seen the functioning of the previously
-mentioned signals. The vertical display and the horizontal display
-signals are not sent to the VGA pins, but they are used by the Screen
-Positioning Module, in order to know when to update the pixels' colors.
+\end{figure}
+
+In Figure \ref{4} we can see the functioning of the previously mentioned
+signals. The vertical display and the horizontal display signals are
+not sent to the VGA pins, but they are used by the Screen Positioning
+Module, in order to know when to update the pixels' colors.
 
 \subsubsection{RGB Module}
 
