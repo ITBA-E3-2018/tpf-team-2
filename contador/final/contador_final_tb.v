@@ -14,7 +14,7 @@ reg nr = 0;
 reg enable = 0;
 
 // Test Outputs
-wire [3:0] bcd_h;
+wire [3:0] bcd_h_0, bcd_h_1;
 wire [3:0] bcd_min_0, bcd_min_1;
 wire [3:0] bcd_s_0, bcd_s_1;
 wire [3:0] bcd_ms_0, bcd_ms_1, bcd_ms_2;
@@ -23,7 +23,8 @@ contador_final contador (
     .NEclk(clk),                        // Negative-edge clock
     .Nreset(nr),                        // Not-reset
     .Enable(enable),                    // Counting Enabler
-    .bcd_h(bcd_h),                      // Hours Passed Output
+    .bcd_h_0(bcd_h_0),
+    .bcd_h_1(bcd_h_1),                  // Hours Passed Output
     .bcd_min_0(bcd_min_0),
     .bcd_min_1(bcd_min_1),              // Minutes Passed Output
     .bcd_s_0(bcd_s_0),
@@ -53,7 +54,7 @@ end
 
 initial begin
     $display("\t\tTime\t BCD_Out");
-    $monitor("%d\t%d:%d%d:%d%d(%d%d%d)",$time,bcd_h, bcd_min_1, bcd_min_0, bcd_s_1, bcd_s_0, bcd_ms_2, bcd_ms_1, bcd_ms_0);
+    $monitor("%d\t%d%d:%d%d:%d%d(%d%d%d)",$time,bcd_h_0, bcd_h_1, bcd_min_1, bcd_min_0, bcd_s_1, bcd_s_0, bcd_ms_2, bcd_ms_1, bcd_ms_0);
 end
 
 endmodule

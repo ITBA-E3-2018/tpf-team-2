@@ -6,7 +6,7 @@ module contador_final (
     NEclk,                              // Negative-edge clock
     Nreset,                             // Not-reset
     Enable,                             // Counting Enabler
-    bcd_h,                              // Hours Passed Output
+    bcd_h_0, bcd_h_1,                   // Hours Passed Output
     bcd_min_0, bcd_min_1,               // Minutes Passed Output
     bcd_s_0, bcd_s_1,                   // Seconds Passed Output
     bcd_ms_0, bcd_ms_1, bcd_ms_2        // Milliseconds Passed Output
@@ -59,7 +59,7 @@ count2watch #(.BITS(size)) watch_data (
 
 bin2bcd converter (
     .bin_h(hr), .bin_min(min), .bin_s(s), .bin_ms(ms),
-    .bcd_h_0(bcd_h_0), .bcd_h_1(bcd_h_1)
+    .bcd_h_0(bcd_h_0), .bcd_h_1(bcd_h_1),
     .bcd_min_0(bcd_min_0), .bcd_min_1(bcd_min_1),
     .bcd_s_0(bcd_s_0), .bcd_s_1(bcd_s_1),
     .bcd_ms_0(bcd_ms_0), .bcd_ms_1(bcd_ms_1), .bcd_ms_2(bcd_ms_2)

@@ -33,7 +33,7 @@ always @(*) begin
     ms <= count % 1000;
     s <= (count/1000) % 60;
     min <= (count/1000/60) % 60;
-    hr <= (count/1000/60/60) % 10;
+    hr <= (count/1000/60/60) % 100;
 end
 
 endmodule
